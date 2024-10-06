@@ -7,7 +7,7 @@
     <title>Bootstrap Test</title>
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <!-- Bootstrap Navbar -->
