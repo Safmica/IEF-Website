@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'freshman';
+    src: url('/fonts/freshman/freshman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dortmund';
+    src: url('/fonts/dortmund/Dortmund-ExtraBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: sans-serif;
+    font-family: 'freshman';
     background: linear-gradient(to bottom, #15238c, #224faa, #15238c);
 }
 
@@ -28,7 +42,7 @@ body {
     height: 100%;
 }
 
-label {
+.lbl-signup {
     color: #fff6ed;
     font-size: 2.3em;
     justify-content: center;
@@ -37,6 +51,18 @@ label {
     font-weight: bold;
     cursor: pointer;
     transition: .5s ease-in-out;
+}
+
+.lbl-login {
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: #224faa;
+    transform: scale(.6);
 }
 
 .input-signup, .input-login {
@@ -50,6 +76,7 @@ label {
     border: none;
     outline: none;
     border-radius: 5px;
+    font-family: 'dortmund';
 }
 
 .btn-signup {
@@ -59,7 +86,6 @@ label {
     justify-content: center;
     display: block;
     color: #000;
-    font-weight: bold;
     background: #f4c253;
     font-size: 1em;
     margin-top: 20px;
@@ -67,6 +93,7 @@ label {
     border: none;
     border-radius: 5px;
     transition: .2s ease-in;
+    font-family: 'dortmund';
     cursor: pointer;
 }
 
@@ -81,7 +108,7 @@ label {
     justify-content: center;
     display: block;
     color: #e0dede;
-    font-weight: bold;
+    font-family: 'dortmund';
     background: #224faa;
     font-size: 1em;
     margin-top: 20px;
@@ -104,20 +131,15 @@ label {
     transition: .8s ease-in-out;
 }
 
-.login label {
-    color: #224faa;
-    transform: scale(.6);
-}
-
 #check-login:checked ~ .login {
     transform: translateY(-500px);
 }
 
-#check-login:checked ~ .login label {
+#check-login:checked ~ .login .lbl-login {
     transform: scale(.8);
 }
 
-#check-login:checked ~ .signup label {
+#check-login:checked ~ .signup .lbl-signup {
     transform: scale(.6);
 }
 

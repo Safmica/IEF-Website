@@ -15,7 +15,7 @@
 
         <div class="signup">
             <form action="">
-                <label for="check-login" aria-hidden="true">Sign Up</label>
+                <label class="lbl-signup" for="check-login" aria-hidden="true">Sign Up</label>
                 <input class="input-signup" type="text" name="username" placeholder="Username" required>
                 <input class="input-signup" type="email" name="email" placeholder="Email" required>
                 <input class="input-signup" type="password" name="password" placeholder="Password" required>
@@ -25,7 +25,7 @@
 
         <div class="login">
             <form action="">
-                <label for="check-login" aria-hidden="true">Login</label>
+                <label class="lbl-login" for="check-login" aria-hidden="true">Login</label>
                 <input class="input-login" type="email" name="email" placeholder="Email" required>
                 <input class="input-login" type="password" name="password" placeholder="Password" required>
                 <button class="btn-login">Login</button>
