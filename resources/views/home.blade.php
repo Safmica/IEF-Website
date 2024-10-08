@@ -87,7 +87,8 @@
                     <span class="big-header mb-10" data-aos="fade-down" data-aos-duration="2500" id="typed-header"></span>
                     {{-- <h1 class="big-header mb-10" id="element" data-aos="fade-right" data-aos-duration="1500">IEF 2024</h1> --}}
                     <p class="primary-copy mb-30" data-aos="fade-right" data-aos-duration="2000">
-                        IEF 2024 adalah acara tahunan yang diselenggarakan oleh Intel UNSRI, yang berfokus pada peningkatan kemampuan berbahasa Inggris melalui berbagai kompetisi seperti speech, newscasting, dan debat.
+                        FASILKOM English Festival is an annual international competition held by ILKOM’s Community of English Lovers (INTEL), UNSRI. There are four category of competitions which are debate, speech, scrabble and newscasting. It will be held on 23 October 2024.
+
                     </p>
                     <a href="#timeline" class="btn-primary mr-10 medium-header-dortmund" data-aos="fade-right" data-aos-duration="2500">Timeline</a>
                 </div>
@@ -330,7 +331,7 @@
     </div>
     <!-- Contact Person End -->
 
-    
+
     {{-- Typed JS --}}
     <Script>
         var typed = new Typed('#typed-header', {
@@ -349,7 +350,7 @@
     AOS.init();
     </script>
     {{-- Data AOS End --}}
-    
+
     <!-- Bootstrap JS -->
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
