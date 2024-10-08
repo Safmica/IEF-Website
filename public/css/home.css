@@ -1,0 +1,170 @@
+:root {
+    /* Color Variables */
+    --bluesoft: #f4fafd;
+    --softpink: #fff6ed;
+    --softgreen: #e7e5d0;
+    --softblue: #224faa;
+    --blue: #15238c;
+    --yellow: #f4c253;
+    --grey: #555555;
+    --darkgrey: #949293;
+
+    /* Font Weight Variables */
+    --fwextrabold: 800;
+    --fwbold: 700;
+    --fwsemibold: 600;
+    --fwmedium: 500;
+    --fwregular: 400;
+    --fwlight: 300;
+}
+
+/* Font Face Definitions */
+@font-face {
+    font-family: "freshman";
+    src: url("/public/fonts/freshman/Freshman.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "dortmund";
+    src: url("/public/fonts/dortmund/Dortmund-ExtraBold.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    background: var(--bluesoft) !important;
+    min-height: 100vh;
+}
+
+/* Font Header Styles */
+.big-header {
+    font-family: "freshman";
+    font-weight: var(--fwextrabold);
+    color: var(--blue);
+    font-size: 48px;
+    margin: 0;
+}
+
+.medium-header {
+    font-family: "freshman";
+    font-weight: var(--fwbold);
+    color: var(--blue);
+    font-size: 28px;
+    margin: 0;
+}
+
+.medium-header-dortmund {
+    font-family: "dortmund";
+    font-weight: var(--fwbold);
+    color: var(--grey);
+    font-size: 28px;
+    margin: 0;
+}
+
+.small-header-dortmund {
+    font-family: "dortmund";
+    font-weight: var(--fwsemibold);
+    color: #212529 !important;
+    font-size: 20px;
+    margin: 0;
+}
+
+.small-header {
+    font-family: "freshman";
+    font-weight: var(--fwbold);
+    color: var(--blue);
+    font-size: 22px;
+    margin: 0;
+}
+
+.primary-copy {
+    font-size: 16px;
+    font-weight: var(--fwregular);
+    line-height: 28px;
+    color: var(--grey);
+    margin: 0;
+}
+
+/* Button Styles */
+.btn-primary {
+    padding: 12px 20px;
+    background: var(--blue) !important;
+    color: var(--softpink) !important;
+    font-size: 16px;
+    font-weight: var(--fwsemibold);
+    border-radius: 50px;
+    border: 0;
+    text-decoration: none;
+}
+
+/* Carousel Icon Styles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+/* Margin Utility Classes */
+.mb-10 { margin-bottom: 10px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-70 { margin-bottom: 70px; }
+.mr-10 { margin-right: 10px; }
+.mr-30 { margin-right: 30px; }
+.mt-10 { margin-top: 10px; }
+.mt-30 { margin-top: 30px; }
+.mt-70 { margin-top: 70px; }
+.mt-100 { margin-top: 100px; }
+
+/* Timeline Styles */
+.timeline-with-icons {
+    border-left: 2.5px solid hsl(0, 0%, 90%);
+    position: relative;
+    list-style: none;
+}
+
+.timeline-with-icons .timeline-item {
+    position: relative;
+}
+
+.timeline-with-icons .timeline-item:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.timeline-with-icons .timeline-icon {
+    position: absolute;
+    left: -48px;
+    background-color: var(--blue);
+    color: hsl(240, 64%, 32%);
+    border-radius: 50%;
+    height: 31px;
+    width: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Styles */
+.container .row .card1 {
+    padding: 30px;
+    border-radius: 16px;
+    background: var(--bluesoft);
+    cursor: pointer;
+}
+
+.container .row .card1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    background: var(--bluesoft);
+    transition: all 0.5s ease;
+}

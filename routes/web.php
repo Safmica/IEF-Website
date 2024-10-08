@@ -5,7 +5,7 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\Controller;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/login', [Controller::class, 'login']);
