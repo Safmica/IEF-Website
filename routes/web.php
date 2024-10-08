@@ -10,6 +10,8 @@ Route::get('/', function () {
 
 Route::get('/login', [Controller::class, 'login']);
 Route::get('/welcome', [Controller::class, 'welcome']);
+Route::get('/competition', [Controller::class, 'competition']);
+
 
 // Route Admin
 Route::get('/admin/dashboard', [Controller::class, 'admindashboard']);
