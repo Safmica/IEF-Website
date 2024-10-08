@@ -13,28 +13,7 @@
                     <a class="nav-link" aria-current="page" href="/welcome">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Competition
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">Scrabble</a></li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="">Debate</a></li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="">Newscasting</a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="">Speech</a>
-                        </li>
-                    </ul>
+                    <a class="nav-link" aria-current="page" href="/competition">Competitions</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../All Teams/index.html">Timeline</a>

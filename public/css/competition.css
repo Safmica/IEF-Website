@@ -38,13 +38,10 @@ header{
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
 }
 a{
     text-decoration: none;
-}
-.content-below{
-    z-index: 23047834 !important;
 }
 .slider{
     height: 100vh;

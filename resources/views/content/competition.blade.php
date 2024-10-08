@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Competitions</title>
     <link rel="stylesheet" href='https://unpkg.com/boxicons@latest/css/boxicons.min.css'>
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 
     <link rel="stylesheet" href="css/competition.css">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
         body{
@@ -16,9 +17,13 @@
 
         }
     </style>
+    <link rel="icon" href="images/assets/ief2024.png" type="image/x-icon">
+
 </head>
 <body>
+    <header>
     @include('layouts.navbar')
+</header>
     {{-- CONTENT --}}
     <div class="slider">
         <div class="list">
