@@ -32,8 +32,7 @@ nav {
 }
 
 .navbar-brand {
-    font-family: 'dortmund';
-    font-weight: 500;
+    font-family: 'freshman';
     font-size: 25px;
 }
 
@@ -90,7 +89,7 @@ nav {
     margin-top: 20px;
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: 0.2s ease-in;
     font-family: "dortmund";
     cursor: pointer;

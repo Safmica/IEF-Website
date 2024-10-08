@@ -17,4 +17,20 @@ class Controller extends BaseController
     function welcome() {
         return view("content/welcome");
     }
+
+    // Admin
+    function admindashboard()
+    {
+        return view("admin/dashboard");
+    }
+
+    function adminexport()
+    {
+        return view("admin/export-data");
+    }
+
+    function adminmanage()
+    {
+        return view("admin/manage-account");
+    }
 }
