@@ -13,4 +13,8 @@ class Controller extends BaseController
     function login() {
         return view("validate/login");
     }
+
+    function welcome() {
+        return view("content/welcome");
+    }
 }

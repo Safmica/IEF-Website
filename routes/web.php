@@ -9,5 +9,6 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [Controller::class, 'login']);
+Route::get('/welcome', [Controller::class, 'welcome']);
 
 Route::resource('admin', adminController::class);

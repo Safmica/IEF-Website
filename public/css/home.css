@@ -21,14 +21,14 @@
 /* Font Face Definitions */
 @font-face {
     font-family: "freshman";
-    src: url("/public/fonts/freshman/Freshman.ttf");
+    src: url("/fonts/freshman/freshman.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "dortmund";
-    src: url("/public/fonts/dortmund/Dortmund-ExtraBold.otf");
+    src: url("/fonts/dortmund/Dortmund-ExtraBold.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
@@ -48,7 +48,7 @@ body {
 .big-header {
     font-family: "freshman";
     font-weight: var(--fwextrabold);
-    color: var(--blue);
+    color: var(--softblue);
     font-size: 48px;
     margin: 0;
 }
@@ -56,7 +56,7 @@ body {
 .medium-header {
     font-family: "freshman";
     font-weight: var(--fwbold);
-    color: var(--blue);
+    color: var(--softblue);
     font-size: 28px;
     margin: 0;
 }
@@ -80,12 +80,13 @@ body {
 .small-header {
     font-family: "freshman";
     font-weight: var(--fwbold);
-    color: var(--blue);
+    color: var(--softblue);
     font-size: 22px;
     margin: 0;
 }
 
 .primary-copy {
+    font-family: 'dortmund';
     font-size: 16px;
     font-weight: var(--fwregular);
     line-height: 28px;
