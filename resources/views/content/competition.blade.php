@@ -93,7 +93,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                 <img src="images/assets/newscasting-compe.jpg" alt="">
 
                 <div class="content">
-                    <div class="title">NEWSCASTING</div>
+                    <div class="title-news">NEWSCASTING</div>
                     <div class="description">
                         In this Newscasting competition, participants will be delivering news as professional news anchor in television within the given time based on the round. This year, Newscasting Competition IEF 2024 is open for all high school and varsity students internationally. The scoring criteria of this competition are performance (self-presentation, confidence, attire, expression and movements), material (material, intonation, tempo, timing) and English Ability (vocabulary, grammar, pronunciation, fluency).                    </div>
                         <div class="custom-box">
