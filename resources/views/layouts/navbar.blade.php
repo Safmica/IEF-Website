@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-lg-center gap-lg-5 mb-2 mb-lg-0 ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/welcome">Home</a>
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" aria-current="page" href="/competition">Competitions</a>
