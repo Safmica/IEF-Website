@@ -21,6 +21,10 @@ class Controller extends BaseController
     function competition() {
         return view("content/competition");
     }
+    
+    function about() {
+        return view("content/about");
+    }
 
     // Admin
     function admindashboard()
