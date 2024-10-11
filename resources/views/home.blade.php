@@ -89,99 +89,103 @@
 
     <!-- Section: Timeline -->
     <div class="container">
-        <section class="py-5 ms-3">
-            <ul class="timeline-with-icons">
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-rocket text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Registrasi</h5>
-                    <p class="text-muted mb-2 fw-bold">14-30 Oktober 2024</p>
-                    <p class="text-muted">
-                        Periode registrasi ini terbuka bagi seluruh calon peserta yang ingin mengikuti berbagai kompetisi di IEF 2024.
-                        Peserta dari berbagai latar belakang, baik mahasiswa, pelajar, maupun peserta umum, dapat mendaftar secara online melalui portal resmi IEF.
-                    </p>
-                </li>
+    <section class="py-5 ms-3">
+        <ul class="timeline-with-icons">
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-rocket text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Registration</h5>
+                <p class="text-muted mb-2 fw-bold">October 14-30, 2024</p>
+                <p class="text-muted">
+                    The registration period is open to all prospective participants who wish to join various competitions at IEF 2024.
+                    Participants from diverse backgrounds, including students, pupils, and the general public, can register online through the official IEF portal.
+                </p>
+            </li>
 
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-hand-holding-usd text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Opening Ceremony (online)</h5>
-                    <p class="text-muted mb-2 fw-bold">23 Oktober 2024</p>
-                    <p class="text-muted">
-                        Acara pembukaan IEF 2024 secara daring, diisi dengan sambutan, informasi acara, dan preview lomba. Dapat diikuti oleh seluruh peserta melalui streaming.
-                    </p>
-                </li>
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-hand-holding-usd text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Opening Ceremony (online)</h5>
+                <p class="text-muted mb-2 fw-bold">October 23, 2024</p>
+                <p class="text-muted">
+                    The opening ceremony of IEF 2024 will be held online, featuring speeches, event information, and a competition preview.
+                    It can be attended by all participants through live streaming.
+                </p>
+            </li>
 
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-users text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Pengiriman Video Lomba (Speech dan Newscasting)</h5>
-                    <p class="text-muted mb-2 fw-bold">23-30 Oktober 2024</p>
-                    <p class="text-muted">
-                        Peserta kategori Speech dan Newscasting mengirimkan video lomba sesuai tema dan kriteria yang ditentukan untuk penilaian oleh juri.
-                    </p>
-                </li>
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-users text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Submission of Competition Videos (Speech and Newscasting)</h5>
+                <p class="text-muted mb-2 fw-bold">October 23-30, 2024</p>
+                <p class="text-muted">
+                    Participants in the Speech and Newscasting categories are required to submit their competition videos based on the given theme
+                    and criteria for evaluation by the judges.
+                </p>
+            </li>
 
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Penilaian Juri</h5>
-                    <p class="text-muted mb-2 fw-bold">30 Oktober 2024 - 1 November 2024</p>
-                    <p class="text-muted">
-                        Juri melakukan penilaian video untuk kategori Speech dan Newscasting, menilai dari konten, gaya penyampaian, dan kreativitas.
-                    </p>
-                </li>
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Judging Period</h5>
+                <p class="text-muted mb-2 fw-bold">October 30 - November 1, 2024</p>
+                <p class="text-muted">
+                    Judges will evaluate the competition videos for the Speech and Newscasting categories, assessing content, presentation style, and creativity.
+                </p>
+            </li>
 
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Kegiatan Lomba Debate dan Scrabble</h5>
-                    <p class="text-muted mb-2 fw-bold">2 November 2024</p>
-                    <p class="text-muted">
-                        Pelaksanaan lomba debat dan scrabble. Peserta akan bertanding dalam format turnamen dan diuji kemampuan berargumen dan strategi mereka.
-                    </p>
-                </li>
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Debate and Scrabble Competitions</h5>
+                <p class="text-muted mb-2 fw-bold">November 2, 2024</p>
+                <p class="text-muted">
+                    The debate and scrabble competitions will take place. Participants will compete in a tournament format, showcasing their
+                    argumentation and strategic skills.
+                </p>
+            </li>
 
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Semi Final Seluruh Kompetisi</h5>
-                    <p class="text-muted mb-2 fw-bold">3-4 November 2024</p>
-                    <p class="text-muted">
-                        Babak semi final untuk seluruh kategori lomba, dengan sistem gugur untuk menentukan siapa yang melaju ke final.
-                    </p>
-                </li>
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Semi-Finals of All Competitions</h5>
+                <p class="text-muted mb-2 fw-bold">November 3-4, 2024</p>
+                <p class="text-muted">
+                    The semi-final rounds for all competition categories will be held, with knockout systems to determine who will advance to the final round.
+                </p>
+            </li>
 
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Final Seluruh Kompetisi</h5>
-                    <p class="text-muted mb-2 fw-bold">5-6 November 2024</p>
-                    <p class="text-muted">
-                        Pertandingan babak final untuk semua kompetisi, menampilkan peserta terbaik yang bersaing untuk menjadi pemenang.
-                    </p>
-                </li>
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Finals of All Competitions</h5>
+                <p class="text-muted mb-2 fw-bold">November 5-6, 2024</p>
+                <p class="text-muted">
+                    The final rounds of all competitions will feature the best participants competing to become the winners.
+                </p>
+            </li>
 
-                <li class="timeline-item mb-5">
-                    <span class="timeline-icon">
-                        <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
-                    </span>
-                    <h5 class="small-header-dortmund mb-2">Awards Ceremony</h5>
-                    <p class="text-muted mb-2 fw-bold">22 November 2024</p>
-                    <p class="text-muted">
-                        Upacara penghargaan untuk mengumumkan dan memberikan trofi kepada para pemenang dari seluruh kompetisi IEF 2024.
-                    </p>
-                </li>
-            </ul>
-        </section>
-    </div>
+            <li class="timeline-item mb-5">
+                <span class="timeline-icon">
+                    <i class="fas fa-money-bill-wave text-primary fa-sm fa-fw"></i>
+                </span>
+                <h5 class="small-header-dortmund mb-2">Awards Ceremony</h5>
+                <p class="text-muted mb-2 fw-bold">November 22, 2024</p>
+                <p class="text-muted">
+                    The awards ceremony will announce and present trophies to the winners of all the competitions at IEF 2024.
+                </p>
+            </li>
+        </ul>
+    </section>
+</div>
+
     <!-- Section: Timeline End  -->
 
     {{-- Timeline End --}}
@@ -196,14 +200,14 @@
         </div>
     </div>
 
-    <div class="container text-center" data-aos="fade-up" data-aos-duration="2000">
+    <div class="container text-center mb-70" data-aos="fade-up" data-aos-duration="2000">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12 mt-4">
                 <div class="card card1">
                     <img src="../images/assets/debate.jpg" class="card-img-top img-fluid" alt="Debate">
                     <div class="card-body">
                         <h5 class="card-title small-header-dortmund mb-10">Debate</h5>
-                        <a href="#" target="_blank" class="btn btn-primary">Lihat Details</a>
+                         <a href="{{ url('competition') }}" class="btn btn-primary">Lihat Details</a>
                     </div>
                 </div>
             </div>
@@ -212,7 +216,7 @@
                     <img src="/images/assets/spech.jpg" class="card-img-top img-fluid" alt="Speech">
                     <div class="card-body">
                         <h5 class="card-title small-header-dortmund mb-10">Speech</h5>
-                        <a href="#" target="_blank" class="btn btn-primary">Lihat Details</a>
+                        <a href="{{ url('competition') }}" class="btn btn-primary">Lihat Details</a>
                     </div>
                 </div>
             </div>
@@ -221,7 +225,7 @@
                     <img src="/images/assets/scramble.jpg" class="card-img-top img-fluid" alt="Scrabble">
                     <div class="card-body">
                         <h5 class="card-title small-header-dortmund mb-10">Scrabble</h5>
-                        <a href="#" target="_blank" class="btn btn-primary">Lihat Details</a>
+                        <a href="{{ url('competition') }}" class="btn btn-primary">Lihat Details</a>
                     </div>
                 </div>
             </div>
@@ -230,7 +234,7 @@
                     <img src="/images/assets/newcasting.jpg" class="card-img-top img-fluid" alt="Newscasting">
                     <div class="card-body">
                         <h5 class="card-title small-header-dortmund mb-10">Newscasting</h5>
-                        <a href="#" target="_blank" class="btn btn-primary">Lihat Details</a>
+                         <a href="{{ url('competition') }}" class="btn btn-primary">Lihat Details</a>
                     </div>
                 </div>
             </div>
@@ -238,8 +242,8 @@
     </div>
     <!-- Competition End -->
 
-    <!-- Contact Person -->
-    <div class="container mt-5" data-aos="fade-down" data-aos-duration="1000">
+    {{-- <!-- Contact Person --> OPSIONAL --}}
+    {{-- <div class="container mt-5" data-aos="fade-down" data-aos-duration="1000">
         <div class="row justify-content-center text-center">
             <div class="col-lg-12">
                 <h3 class="medium-header mb-10">CONTACT PERSON</h3>
@@ -279,7 +283,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Contact Person End -->
 
 

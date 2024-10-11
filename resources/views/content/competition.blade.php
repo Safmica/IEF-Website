@@ -64,7 +64,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
 
                 <div class="content">
                     <div class="title">SPEECH</div>
-                    <div class="description">
+                    <div class="description" >
                         Speech Competition IEF 2024 is open for all students at the university level in Indonesia. This year we would especially invite students of varsities from Malaysia and Philippines to participate in IEF 2024. In this Speech competition, participants will be delivering their own written speech, based on selected themes given by the committee. The scoring criteria of this competition are speech content, performance, and English ability of participants.
                     </div>
                     <div class="custom-box">
@@ -75,7 +75,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                                 <span>0895-3249-85585</span>
                             </div>
                         </div>
-                    
+
                         <div class="contact-person">
                             <i class='bx bx-user-circle' style='color: #F4C253; font-size: 40px;'></i>
                             <div>
@@ -83,7 +83,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                                 <span>0823-3089-4841</span>
                             </div>
                         </div>
-                    
+
                         <button class="guidebook-btn">Guidebook</button>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                                     <span>0821-8120-8305</span>
                                 </div>
                             </div>
-                        
+
                             <div class="contact-person">
                                 <i class='bx bx-user-circle' style='color: #F4C253; font-size: 40px;'></i>
                                 <div>
@@ -112,7 +112,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                                     <span>0812-5063-7184</span>
                                 </div>
                             </div>
-                        
+
                             <button class="guidebook-btn">Guidebook</button>
                         </div>
                 </div>
@@ -134,7 +134,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                                                     <span>0823-7600-8881</span>
                                                 </div>
                                             </div>
-                                        
+
                                             <div class="contact-person">
                                                 <i class='bx bx-user-circle' style='color: #F4C253; font-size: 40px;'></i>
                                                 <div>
@@ -142,7 +142,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                                                     <span>0877-4843-2023</span>
                                                 </div>
                                             </div>
-                                        
+
                                             <button class="guidebook-btn">Guidebook</button>
                                         </div>
                 </div>
@@ -172,7 +172,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
             <button class="next"> > </button>
         </div>
 
-        
+
     </div>
     <section class="marquee">
         <div class="marquee_inner">
@@ -210,7 +210,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
         <div class="container">
         </div>
       </section>
-      
+
       <section class="timeline">
         <div class="info">
             <img width="50" height="50" src="https://assets.codepen.io/210284/face.svg" alt="" />
@@ -218,12 +218,12 @@ Debate competition IEF 2024 is open for all students at the university level in 
             <p>I want to join, but will it fit my schedule? Let's find out!</p>
             <button class="join-button" onclick="window.location.href='URL_TUJUAN'">Join Now &gt;</button>
         </div>
-    
+
         <ol>
             <li>
                 <div>
                     <time>Registration</time>
-                    <button class="date-button">14 Oct 2024 - 30 Oct 2024</button> 
+                    <button class="date-button">14 Oct 2024 - 30 Oct 2024</button>
                     <span class="event-format">Online</span>
                 </div>
             </li>
@@ -239,7 +239,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
                     <time>Video Submission</time>
                     <button class="date-button">23 Oct 2024 - 30 Oct 2024</button>
                     <span class="event-format">Online</span> <br>
-                    For Speech & Newscasting 
+                    For Speech & Newscasting
                 </div>
             </li>
             <li>
@@ -281,7 +281,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
         </ol>
     </section>
 <div class="space-before-footer"></div>
-    
+
 </div>
 
     <!-- Bootstrap JS -->
