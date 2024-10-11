@@ -9,5 +9,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 //Endpoint Register dan Login
-Route::post('register', \App\Http\Controllers\API\RegisterController::class);
+Route::post('SignUp', \App\Http\Controllers\API\SignUpController::class);
 Route::post('login', \App\Http\Controllers\API\LoginController::class);
