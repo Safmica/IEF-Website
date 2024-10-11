@@ -13,6 +13,7 @@ Route::get('/welcome', [Controller::class, 'welcome']);
 Route::get('/competition', [Controller::class, 'competition']);
 Route::get('/about', [Controller::class, 'about']);
 Route::get('/register', [Controller::class, 'register']);
+Route::get('/faq', [Controller::class, 'faq']);
 
 // Route Admin
 Route::get('/admin/dashboard', [Controller::class, 'admindashboard']);
