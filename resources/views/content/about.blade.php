@@ -21,7 +21,7 @@
     <section class="about-section">
         <div class="about-content">
             <div class="about-video">
-                <iframe width="720" height="400" src="https://www.youtube.com/embed/yAoLSRbwxL8"
+                <iframe width="720" height="400" src="https://www.youtube.com/embed//jhRoM2j4DIU"
                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
