@@ -67,7 +67,7 @@
               </div>
               <div class="mb-4">
                 <label for="email" class="form-label about-description">Email</label>
-                <input class="form-control" type="email" id="email" name="email" placeholder="Email" required>
+                <input class="form-control" type="email" id="email" name="email" required>
               </div>
               <div class="mb-4">
                 <label for="jenis_lomba" class="form-label about-description">Jenis Lomba</label>
