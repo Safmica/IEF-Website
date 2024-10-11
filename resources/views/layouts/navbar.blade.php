@@ -22,7 +22,7 @@
                     <a class="nav-link" href="../All Teams/index.html">Timeline</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Kontak/index.html">FAQ</a>
+                    <a class="nav-link" aria-current="page" href="/faq">FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a href="/login" class="btn-signin">Sign In</a>
