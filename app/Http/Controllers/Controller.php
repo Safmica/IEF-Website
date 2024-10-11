@@ -29,6 +29,10 @@ class Controller extends BaseController
     function register() {
         return view("content/register");
     }
+    
+    function faq() {
+        return view("content/faq");
+    }
 
     // Admin
     function admindashboard()
