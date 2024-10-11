@@ -7,11 +7,10 @@ use App\Models\User;
 use Dotenv\Validator;
 use Illuminate\Http\Request;
 
-class RegisterController extends Controller
+class SignUpController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
+
+//     Handle Request dari users yang ingin membuat akun baru
     public function __invoke(Request $request)
     {
         $validator = Validator::make($request->all(), [

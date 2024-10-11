@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Handle the Request untuk login.
      */
     public function __invoke(Request $request)
     {
