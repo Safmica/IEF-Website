@@ -18,6 +18,7 @@ Route::get('/register-scrabble', [Controller::class, 'registerScrabble']);
 Route::get('/register-newscasting', [Controller::class, 'registerNewscasting']);
 Route::get('/register-speech', [Controller::class, 'registerSpeech']);
 Route::get('/register-debate', [Controller::class, 'registerDebate']);
+Route::get('/registercompetition', [Controller::class, 'opsiRegister']);
 
 // Route Admin
 Route::get('/admin/dashboard', [Controller::class, 'admindashboard']);

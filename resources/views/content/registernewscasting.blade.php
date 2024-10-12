@@ -135,16 +135,16 @@
               </div>
 
               <div class="mb-4">
-                <label for="photo_upload" class="form-label about-description">Upload Your Photo</label>
-                <input type="file" class="form-control" id="photo_upload" name="photo_upload" required>
+                <label for="photo" class="form-label about-description">Upload Your Photo</label>
+                <input type="file" class="form-control" id="photo" name="photo" required>
               </div>
               <div class="mb-4">
-                <label for="student_card_upload" class="form-label about-description">Upload Your ID Student Card</label>
-                <input type="file" class="form-control" id="student_card_upload" name="student_card_upload" required>
+                <label for="id_student_card" class="form-label about-description">Upload Your ID Student Card</label>
+                <input type="file" class="form-control" id="id_student_card" name="id_student_card" required>
               </div>
               <div class="mb-4">
-                <label for="payment_proof" class="form-label about-description">Upload Proof of Payment</label>
-                <input type="file" class="form-control" id="payment_proof" name="payment_proof" required>
+                <label for="registration_proof" class="form-label about-description">Upload Proof of Payment</label>
+                <input type="file" class="form-control" id="registration_proof" name="registration_proof" required>
                 <p> </p>
                 <p class="form-label about-description mt-2">**Normal registration: Rp. 80.000,00<br>
                 **Extended registration: Rp. 95.000,00</p>

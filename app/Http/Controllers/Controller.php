@@ -50,6 +50,9 @@ class Controller extends BaseController
         return view("content/registerDebate");
     }
 
+    function opsiRegister() {
+        return view("content/opsiRegister");
+    }
 
     // Admin
     function admindashboard()

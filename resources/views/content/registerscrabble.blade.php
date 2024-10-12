@@ -96,77 +96,118 @@
               <div class="alert alert-success mb-4" id="berhasil">
                 <i class="bi bi-check2-square"></i> Registration has been successful.
               </div>
-            <form id="registrationForm">
-              <div class="mb-4">
-                <label for="full_name" class="form-label about-description">Full Name</label>
+              <form id="registrationForm">
+            <div class="mb-4">
+                <label for="full_name" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="full_name" name="full_name" required>
-              </div>
-              <div class="mb-4">
-                <label for="gender" class="form-label about-description">Gender</label>
+            </div>
+            <div class="mb-4">
+                <label for="gender" class="form-label">Gender</label>
                 <input type="text" class="form-control" id="gender" name="gender" required>
-              </div>
-              <div class="mb-4">
-                <label for="student_id_number" class="form-label about-description">Student ID Number</label>
+            </div>
+            <div class="mb-4">
+                <label for="student_id_number" class="form-label">Student ID Number</label>
                 <input type="text" class="form-control" id="student_id_number" name="student_id_number" required>
-              </div>
-              <div class="mb-4">
-                <label for="major" class="form-label about-description">Major</label>
+            </div>
+            <div class="mb-4">
+                <label for="major" class="form-label">Major</label>
                 <input class="form-control" type="text" id="major" name="major" required>
-              </div>
-              <div class="mb-4">
-                <label for="faculty" class="form-label about-description">Faculty</label>
+            </div>
+            <div class="mb-4">
+                <label for="faculty" class="form-label">Faculty</label>
                 <input class="form-control" type="text" id="faculty" name="faculty" required>
-              </div>
-              <div class="mb-4">
-                <label for="university" class="form-label about-description">University</label>
+            </div>
+            <div class="mb-4">
+                <label for="university" class="form-label">University</label>
                 <input class="form-control" type="text" id="university" name="university" required>
-              </div>
-              <div class="mb-4">
-                <label for="nationality" class="form-label about-description">Nationality</label>
+            </div>
+            <div class="mb-4">
+                <label for="nationality" class="form-label">Nationality</label>
                 <input class="form-control" type="text" id="nationality" name="nationality" required>
-              </div>
-              <div class="mb-4">
-                <label for="phone_number" class="form-label about-description">Phone Number/Whatsapp</label>
+            </div>
+            <div class="mb-4">
+                <label for="phone_number" class="form-label">Phone Number/Whatsapp</label>
                 <input class="form-control" type="text" id="phone_number" name="phone_number" required>
-              </div>
-              <div class="mb-4">
-                <label for="email_address" class="form-label about-description">Email Address</label>
+            </div>
+            <div class="mb-4">
+                <label for="email_address" class="form-label">Email Address</label>
                 <input class="form-control" type="email" id="email_address" name="email_address" required>
-              </div>
+            </div>
 
-              <div class="mb-4">
-                <label for="photo_upload" class="form-label about-description">Upload Your Photo</label>
-                <input type="file" class="form-control" id="photo_upload" name="photo_upload" required>
-              </div>
-              <div class="mb-4">
-                <label for="student_card_upload" class="form-label about-description">Upload Your ID Student Card</label>
-                <input type="file" class="form-control" id="student_card_upload" name="student_card_upload" required>
-              </div>
-              <div class="mb-4">
-                <label for="payment_proof" class="form-label about-description">Upload Proof of Payment</label>
-                <input type="file" class="form-control" id="payment_proof" name="payment_proof" required>
-                <p> </p>
-                <p class="form-label about-description mt-2">**Normal registration: Rp. 80.000,00<br>
-                **Extended registration: Rp. 95.000,00</p>
-                <p class="form-label about-description">Mandiri: 1130018844724 (a.n. ANABEL FIORENZA RIZKYLLAH)<br>
+            <div class="mb-4">
+                <label for="photo" class="form-label">Upload Your Photo</label>
+                <input type="file" class="form-control" id="photo" name="photo" required>
+            </div>
+            <div class="mb-4">
+                <label for="id_student_card" class="form-label">Upload Your ID Student Card</label>
+                <input type="file" class="form-control" id="id_student_card" name="id_student_card" required>
+            </div>
+            <div class="mb-4">
+                <label for="registration_proof" class="form-label">Upload Proof of Payment</label>
+                <input type="file" class="form-control" id="registration_proof" name="registration_proof" required>
+                <p>Normal registration: Rp. 80.000,00<br>
+                Extended registration: Rp. 95.000,00</p>
+                <p>Mandiri: 1130018844724 (a.n. ANABEL FIORENZA RIZKYLLAH)<br>
                 Dana: 0895359960703<br>
                 Shopeepay: 0895359960703</p>
-              </div>
+            </div>
 
-              <!-- Checkbox Agreement -->
-              <div class="checkbox-label mb-4">
+            <!-- Checkbox Agreement -->
+            <div class="checkbox-label mb-4">
                 <input type="checkbox" id="agree_participation" name="agree_participation" required>
                 <label for="agree_participation">I agree to participate in the entire selection process until the end of the Scrabble Competition International English Festival 2024.</label>
-              </div>
-              <div class="checkbox-label mb-4">
+            </div>
+            <div class="checkbox-label mb-4">
                 <input type="checkbox" id="agree_final_decision" name="agree_final_decision" required>
                 <label for="agree_final_decision">I understand that the app’s (Woogles.io) decision is final and cannot be contested.</label>
-              </div>
+            </div>
 
-              <div class="d-grid">
-                <button type="submit" class="btn btn-gradient">REGIST</button>
-              </div>
-            </form>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">REGIST</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script to handle form submission -->
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Mencegah form dari reload halaman
+
+            let formData = new FormData(this);
+            let errorMessageElement = document.getElementById('error-message');
+            
+            fetch('{{ route("scrabble.store") }}', {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(errorData => {
+                        throw errorData;
+                    });
+                }
+                return response.json(); // Mengembalikan data JSON jika tidak ada error
+            })
+            .then(data => {
+                // Jika berhasil, sembunyikan pesan error dan tampilkan pesan sukses
+                errorMessageElement.classList.add('d-none');
+                alert('Registration successful!');
+                console.log(data);
+            })
+            .catch(errorData => {
+                // Tampilkan pesan kesalahan dari backend
+                let errorMessage = 'An error occurred. Please try again.';
+                if (errorData && errorData.errors) {
+                    errorMessage = Object.values(errorData.errors).map(error => error.join('<br>')).join('<br>');
+                }
+                errorMessageElement.innerHTML = errorMessage;
+                errorMessageElement.classList.remove('d-none');
+            });
+        });
+    </script>
           </div>
         </div>
       </div>
