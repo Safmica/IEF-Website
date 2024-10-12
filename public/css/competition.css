@@ -143,55 +143,81 @@ a{
 
 .custom-box {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column; /* Main container remains as a column */
     font-weight: 500;
     color: var(--black);
-    justify-content: flex-start; 
-    align-items: center;
+    justify-content: flex-start;
+    align-items: center; /* Center all items in the custom box */
     background-color: #f8f8f8;
     border-radius: 0.5rem;
-    padding: 15px 20px;
+    padding: 10px 15px; /* Reduced padding for smaller size */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
-    max-width: 52 0px; 
+    max-width: 420px; /* Adjusted max-width to make the box smaller */
     width: 100%;
-    opacity: 0; 
-    transform: translateY(20px); 
-    transition: opacity 3s ease, transform 3s ease; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 3s ease;
 }
+
 .custom-box.show {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
 }
+
+.contact-person-container {
+    display: flex;
+    flex-direction: row; /* Arrange contact persons in a row */
+    justify-content: center; /* Center contact persons */
+    width: 100%; /* Make the container take full width */
+    margin-bottom: 10px; /* Space between contacts and the button group */
+}
+
 .contact-person {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px; /* Reduced gap between contact items */
+    margin-right: 15px; /* Space between the two contacts */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;
+    gap: 10px; /* Space between buttons */
     width: 100%;
 }
 
-.guidebook-btn {
+.guidebook-btn,
+.registration-btn {
     background-color: var(--yellow);
     color: var(--white);
     border: none;
     font-family: 'Dortmund', sans-serif;
     font-weight: 500;
     cursor: pointer;
-    padding: 8px 12px; /* Reduce padding for better fit */
+    padding: 8px 12px;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
-    width: 100%; /* Full width on small screens */
-    max-width: 150px; /* Set a max-width for larger screens */
-    text-align: center; /* Center the text */
-    margin-top: 10px; /* Add space between elements */
+    width: 100%;
+    max-width: 120px; /* Adjusted max-width for smaller buttons */
+    text-align: center;
 }
 
-.guidebook-btn:hover {
+.guidebook-btn:hover,
+.registration-btn:hover {
     background-color: var(--dark-navy);
 }
 
-
 @media (max-width: 390px) {
+    .thumbnail{
+opacity: 0;
+    }
+    .contact-person{
+        font-size: 10px;
+    }
+  }
+  @media (max-height: 540px) {
     .thumbnail{
 opacity: 0;
     }
@@ -200,8 +226,7 @@ opacity: 0;
 @media (min-width: 768px) {
     
     .custom-box {
-        flex-direction: row;
-        justify-content: space-between; /* Distribute items evenly */
+        justify-content: space-between;
     }
 
     .guidebook-btn {

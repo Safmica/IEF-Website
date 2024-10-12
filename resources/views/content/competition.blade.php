@@ -28,7 +28,7 @@
     <div class="slider">
         <div class="list">
             <div class="item">
-                <img src="images/assets/debate-compe.jpg" alt="">
+                <img src="images/assets/debate-compe.webp" alt="">
 
                 <div class="content">
                     <div class="title">DEBATE</div>
@@ -37,30 +37,36 @@ Debate competition IEF 2024 is open for all students at the university level in 
 
 
 <div class="custom-box">
-    <div class="contact-person">
-        <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 40px;'></i>
-        <div>
-            <span>Fakhri</span><br>
-            <span>0821‑7295‑6173</span>
+    <div class="contact-person-container">
+        <div class="contact-person">
+            <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 30px;'></i>
+            <div>
+                <span>Fakhri</span><br>
+                <span>0821-7295-6173</span>
+            </div>
+        </div>
+
+        <div class="contact-person">
+            <i class='bx bx-user-circle' style='color: #F4C253; font-size: 30px;'></i>
+            <div>
+                <span>Nadhira</span><br>
+                <span>0831-8428-1701</span>
+            </div>
         </div>
     </div>
 
-    <div class="contact-person">
-        <i class='bx bx-user-circle' style='color: #F4C253; font-size: 40px;'></i>
-        <div>
-            <span>Nadhira</span><br>
-            <span>0831-8428-1701</span>
-        </div>
+    <div class="button-group">
+        <button class="guidebook-btn">Guidebook</button>
+        <button class="registration-btn">Registration</button>
     </div>
-
-    <button class="guidebook-btn">Guidebook</button>
 </div>
+
 
                 </div>
             </div>
 
             <div class="item">
-                <img src="images/assets/speech-compe.jpg" alt="">
+                <img src="images/assets/speech-compe.webp" alt="">
 
                 <div class="content">
                     <div class="title">SPEECH</div>
@@ -68,58 +74,69 @@ Debate competition IEF 2024 is open for all students at the university level in 
                         Speech Competition IEF 2024 is open for all students at the university level in Indonesia. This year we would especially invite students of varsities from Malaysia and Philippines to participate in IEF 2024. In this Speech competition, participants will be delivering their own written speech, based on selected themes given by the committee. The scoring criteria of this competition are speech content, performance, and English ability of participants.
                     </div>
                     <div class="custom-box">
-                        <div class="contact-person">
-                            <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 40px;'></i>
-                            <div>
-                                <span>Eka</span><br>
-                                <span>0895-3249-85585</span>
+                        <div class="contact-person-container">
+                            <div class="contact-person">
+                                <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 30px;'></i>
+                                <div>
+                                    <span>Eka</span><br>
+                                    <span>0895-3249-85585</span>
+                                </div>
+                            </div>
+                    
+                            <div class="contact-person">
+                                <i class='bx bx-user-circle' style='color: #F4C253; font-size: 30px;'></i>
+                                <div>
+                                    <span>Sarah</span><br>
+                                    <span>0823-3089-4841</span>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="contact-person">
-                            <i class='bx bx-user-circle' style='color: #F4C253; font-size: 40px;'></i>
-                            <div>
-                                <span>Sarah</span><br>
-                                <span>0823-3089-4841</span>
-                            </div>
+                    
+                        <div class="button-group">
+                            <button class="guidebook-btn">Guidebook</button>
+                            <button class="registration-btn">Registration</button>
                         </div>
-
-                        <button class="guidebook-btn">Guidebook</button>
                     </div>
                 </div>
             </div>
 
             <div class="item">
-                <img src="images/assets/newscasting-compe.jpg" alt="">
+                <img src="images/assets/newscasting-compe.webp" alt="">
 
                 <div class="content">
                     <div class="title-news">NEWSCASTING</div>
                     <div class="description">
                         In this Newscasting competition, participants will be delivering news as professional news anchor in television within the given time based on the round. This year, Newscasting Competition IEF 2024 is open for all high school and varsity students internationally. The scoring criteria of this competition are performance (self-presentation, confidence, attire, expression and movements), material (material, intonation, tempo, timing) and English Ability (vocabulary, grammar, pronunciation, fluency).                    </div>
                         <div class="custom-box">
-                            <div class="contact-person">
-                                <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 40px;'></i>
-                                <div>
-                                    <span>Azmi</span><br>
-                                    <span>0821-8120-8305</span>
+                            <div class="contact-person-container">
+                                <div class="contact-person">
+                                    <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 30px;'></i>
+                                    <div>
+                                        <span>Azmi</span><br>
+                                        <span>0821-8120-8305</span>
+                                    </div>
+                                </div>
+    
+                                <div class="contact-person">
+                                    <i class='bx bx-user-circle' style='color: #F4C253; font-size: 30px;'></i>
+                                    <div>
+                                        <span>Adetya</span><br>
+                                        <span>0812-5063-7184</span>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="contact-person">
-                                <i class='bx bx-user-circle' style='color: #F4C253; font-size: 40px;'></i>
-                                <div>
-                                    <span>Adetya</span><br>
-                                    <span>0812-5063-7184</span>
-                                </div>
+                        
+                            <div class="button-group">
+                                <button class="guidebook-btn">Guidebook</button>
+                                <button class="registration-btn">Registration</button>
                             </div>
-
-                            <button class="guidebook-btn">Guidebook</button>
                         </div>
+
                 </div>
             </div>
 
             <div class="item">
-                <img src="images/assets/scrabble-compe.jpg" alt="">
+                <img src="images/assets/scrabble-compe.webp" alt="">
 
                 <div class="content">
                     <div class="title">SCRABBLE</div>
@@ -127,23 +144,28 @@ Debate competition IEF 2024 is open for all students at the university level in 
                         Scrabble Competition IEF 2024 is open for all students at the university level in Indonesia. This year we would especially invite students of varsities from Malaysia and Philippines to participate in IEF 2024. In this Scrabble competition, participants will be playing scrabble against other participants in a 1v1 game using an application. The scoring will automatically generated by the application.
                                         </div>
                                         <div class="custom-box">
-                                            <div class="contact-person">
-                                                <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 40px;'></i>
-                                                <div>
-                                                    <span>Fathir</span><br>
-                                                    <span>0823-7600-8881</span>
+                                            <div class="contact-person-container">
+                                                <div class="contact-person">
+                                                    <i class='bx bx-user-circle' style='color: #4A4A4A; font-size: 30px;'></i>
+                                                    <div>
+                                                        <span>Fathir</span><br>
+                                                        <span>0823-7600-8881</span>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="contact-person">
+                                                    <i class='bx bx-user-circle' style='color: #F4C253; font-size: 30px;'></i>
+                                                    <div>
+                                                        <span>Hera</span><br>
+                                                        <span>0877-4843-2023</span>
+                                                    </div>
                                                 </div>
                                             </div>
-
-                                            <div class="contact-person">
-                                                <i class='bx bx-user-circle' style='color: #F4C253; font-size: 40px;'></i>
-                                                <div>
-                                                    <span>Hera</span><br>
-                                                    <span>0877-4843-2023</span>
-                                                </div>
+                                        
+                                            <div class="button-group">
+                                                <button class="guidebook-btn">Guidebook</button>
+                                                <button class="registration-btn">Registration</button>
                                             </div>
-
-                                            <button class="guidebook-btn">Guidebook</button>
                                         </div>
                 </div>
             </div>
@@ -154,16 +176,16 @@ Debate competition IEF 2024 is open for all students at the university level in 
         <div class="thumbnail">
 
             <div class="item">
-                <img src="images/assets/debate-clear.jpg" alt="">
+                <img src="images/assets/debate-clear.webp" alt="">
             </div>
             <div class="item">
-                <img src="images/assets/speech-clear.jpg" alt="">
+                <img src="images/assets/speech-clear.webp" alt="">
             </div>
             <div class="item">
-                <img src="images/assets/newscasting-clear.jpg" alt="">
+                <img src="images/assets/newscasting-clear.webp" alt="">
             </div>
             <div class="item">
-                <img src="images/assets/scrabble-clear.jpg" alt="">
+                <img src="images/assets/scrabble-clear.webp" alt="">
             </div>
 
         </div>
