@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('regist_scrabble', function (Blueprint $table) {
+        Schema::create('regist_speech', function (Blueprint $table) {
             $table->id();
             $table->string('full_name', 255);
             $table->string('gender', 50);
@@ -29,12 +29,8 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('regist_scrabble');
+        Schema::dropIfExists('regist_speech');
     }
 };
