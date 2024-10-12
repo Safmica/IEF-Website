@@ -34,6 +34,23 @@ class Controller extends BaseController
         return view("content/faq");
     }
 
+    function registerScrabble() {
+        return view("content/registerScrabble");
+    }
+
+    function registerNewscasting() {
+        return view("content/registerNewscasting");
+    }
+    
+    function registerSpeech() {
+        return view("content/registerSpeech");
+    }
+
+    function registerDebate() {
+        return view("content/registerDebate");
+    }
+
+
     // Admin
     function admindashboard()
     {
