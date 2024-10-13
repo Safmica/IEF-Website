@@ -16,6 +16,7 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -233,9 +234,12 @@
                       </div>
                     </div>
             </div>
-
         </div>
     </div>
+
+    <footer>
+      @include('layouts.footer')
+  </footer>
 
     <script>
     window.addEventListener('load', function () {
