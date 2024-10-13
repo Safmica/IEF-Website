@@ -189,6 +189,7 @@
                                             <a href="{{ $downloadUrl }}" target="_blank">Unduh File</a>
                                             @endif
                                         </td>
+
                                     </tr>
                                     @endforeach
                                 </tbody>

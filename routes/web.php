@@ -1,10 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DebateController;
-use Illuminate\Support\Facades\Storage;
 
 Route::get('/', function () {
     return view('home');
@@ -40,4 +40,34 @@ Route::get('/admin/data-scrable', [Controller::class, 'datascrable']);
 
 Route::resource('admin', adminController::class);
 
+
 Route::get('/admin/data-debate', [DebateController::class, 'index']);
+Route::get('/download/registration_proof/{filename}', function ($filename) {
+    if (Storage::disk('private')->exists("registration_proofs/{$filename}")) {
+        // Mendapatkan ekstensi file
+        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+
+        // Mengatur tipe konten sesuai ekstensi file
+        $mimeType = '';
+        switch (strtolower($extension)) {
+            case 'jpg':
+            case 'jpeg':
+            case 'png':
+            case 'gif':
+                $mimeType = 'image/' . strtolower($extension);
+                break;
+            case 'pdf':
+                $mimeType = 'application/pdf';
+                break;
+            default:
+                $mimeType = 'application/octet-stream';
+        }
+
+        // Menampilkan file
+        return response()->file(storage_path("app/private/registration_proofs/{$filename}"), [
+            'Content-Type' => $mimeType,
+        ]);
+    } else {
+        abort(404, 'File not found.');
+    }
+})->name('download.registration_proof');
