@@ -239,7 +239,7 @@ Debate competition IEF 2024 is open for all students at the university level in 
             <img width="50" height="50" src="https://assets.codepen.io/210284/face.svg" alt="" />
             <h2>Competition Timeline</h2>
             <p>I want to join, but will it fit my schedule? Let's find out!</p>
-            <button class="join-button" onclick="window.location.href='URL_TUJUAN'">Join Now &gt;</button>
+            <button class="join-button" onclick="window.location.href='/register'">Join Now &gt;</button>
         </div>
 
         <ol>

@@ -182,7 +182,7 @@
                     </div>
                     <div class="card-footer">
                         <div>
-                            <p><strong>HTM:</strong> Rp 100.000</p>
+                            <p><strong>HTM:</strong> Rp 80.000</p>
                             <p><strong>Participants:</strong> 1 per person</p>
                         </div>
                         <a href="#" onclick="redirectToRegistration('speech')" class="btn btn-details">Register</a>
@@ -203,7 +203,7 @@
                     </div>
                     <div class="card-footer">
                         <div>
-                            <p><strong>HTM:</strong> Rp 120.000</p>
+                            <p><strong>HTM:</strong> Rp 80.000</p>
                             <p><strong>Participants:</strong> 2 per game</p>
                         </div>
                         <a href="#" onclick="redirectToRegistration('scrabble')" class="btn btn-details">Register</a>
@@ -224,7 +224,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="justify-center">
-                            <p><strong>HTM:</strong> Rp 130.000</p>
+                            <p><strong>HTM:</strong> Rp 80.000</p>
                             <p><strong>Participants:</strong> 1 per person</p>
                         </div>
                       </div>

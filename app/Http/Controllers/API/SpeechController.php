@@ -44,8 +44,8 @@ class SpeechController extends Controller
                 'nationality' => 'required|string|max:100',
                 'phone_number' => 'required|string|max:50',
                 'email_address' => 'required|email|max:255',
-                'photo' => 'required|file|mimes:jpeg,png,jpg|max:2048',
-                'id_student_card' => 'required|file|mimes:jpeg,png,jpg|max:2048',
+                'photo' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
+                'id_student_card' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
                 'registration_proof' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
             ]);
 

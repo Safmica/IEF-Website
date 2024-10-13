@@ -45,8 +45,8 @@ class DebateController extends Controller
                 'nationality_s1' => 'required|string|max:100',
                 'phone_number_s1' => 'required|string|max:50',
                 'email_address_s1' => 'required|email|max:255',
-                'photo_s1' => 'required|file|mimes:jpeg,png,jpg|max:2048',
-                'id_student_card_s1' => 'required|file|mimes:jpeg,png,jpg|max:2048',
+                'photo_s1' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
+                'id_student_card_s1' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
                 'full_name_s2' => 'required|string|max:255',
                 'gender_s2' => 'required|string|max:50',
                 'student_id_number_s2' => 'required|string|max:100',
@@ -56,8 +56,8 @@ class DebateController extends Controller
                 'nationality_s2' => 'required|string|max:100',
                 'phone_number_s2' => 'required|string|max:50',
                 'email_address_s2' => 'required|email|max:255',
-                'photo_s2' => 'required|file|mimes:jpeg,png,jpg|max:2048',
-                'id_student_card_s2' => 'required|file|mimes:jpeg,png,jpg|max:2048',
+                'photo_s2' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
+                'id_student_card_s2' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
                 'registration_proof' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
             ]);
 
