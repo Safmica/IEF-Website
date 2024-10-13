@@ -172,7 +172,45 @@
       </div>
     </div>
   </div>
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah form dari reload halaman
 
+        let formData = new FormData(this);
+        let errorMessageElement = document.getElementById('error-message');
+        
+        fetch('{{ route("newscasting.store") }}', {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorData => {
+                    throw errorData;
+                });
+            }
+            return response.json(); // Mengembalikan data JSON jika tidak ada error
+        })
+        .then(data => {
+            // Jika berhasil, sembunyikan pesan error dan tampilkan pesan sukses
+            errorMessageElement.classList.add('d-none');
+            alert('Registration successful!');
+            console.log(data);
+        })
+        .catch(errorData => {
+            // Tampilkan pesan kesalahan dari backend
+            let errorMessage = 'An error occurred. Please try again.';
+            if (errorData && errorData.errors) {
+                errorMessage = Object.values(errorData.errors).map(error => error.join('<br>')).join('<br>');
+            }
+            errorMessageElement.innerHTML = errorMessage;
+            errorMessageElement.classList.remove('d-none');
+        });
+    });
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>

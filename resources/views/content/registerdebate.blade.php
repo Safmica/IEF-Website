@@ -98,53 +98,54 @@
               </div>
               
             <form id="registrationForm">
-
+              <label for="team_name" class="form-label about-description">Team Name</label>
+              <input type="text" class="form-control" id="team_name" name="team_name" required>
               <!-- Container Speaker 1 -->
               <div class="speaker-container mb-4">
                 <p class="form-label about-description speaker-title">Speaker 1</p>
                 <div class="mb-4">
-                  <label for="full_name" class="form-label about-description">Full Name</label>
-                  <input type="text" class="form-control" id="full_name" name="full_name" required>
+                  <label for="full_name_s1" class="form-label about-description">Full Name</label>
+                  <input type="text" class="form-control" id="full_name_s1" name="full_name_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="gender" class="form-label about-description">Gender</label>
-                  <input type="text" class="form-control" id="gender" name="gender" required>
+                  <label for="gender_s1" class="form-label about-description">Gender</label>
+                  <input type="text" class="form-control" id="gender_s1" name="gender_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="student_id_number" class="form-label about-description">Student ID Number</label>
-                  <input type="text" class="form-control" id="student_id_number" name="student_id_number" required>
+                  <label for="student_id_number_s1" class="form-label about-description">Student ID Number</label>
+                  <input type="text" class="form-control" id="student_id_number_s1" name="student_id_number_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="major" class="form-label about-description">Major</label>
-                  <input class="form-control" type="text" id="major" name="major" required>
+                  <label for="major_s1" class="form-label about-description">Major</label>
+                  <input class="form-control" type="text" id="major_s1" name="major_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="faculty" class="form-label about-description">Faculty</label>
-                  <input class="form-control" type="text" id="faculty" name="faculty" required>
+                  <label for="faculty_s1" class="form-label about-description">Faculty</label>
+                  <input class="form-control" type="text" id="faculty_s1" name="faculty_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="university" class="form-label about-description">University</label>
-                  <input class="form-control" type="text" id="university" name="university" required>
+                  <label for="university_s1" class="form-label about-description">University</label>
+                  <input class="form-control" type="text" id="university_s1" name="university_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="nationality" class="form-label about-description">Nationality</label>
-                  <input class="form-control" type="text" id="nationality" name="nationality" required>
+                  <label for="nationality_s1" class="form-label about-description">Nationality</label>
+                  <input class="form-control" type="text" id="nationality_s1" name="nationality_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="phone_number" class="form-label about-description">Phone Number/Whatsapp</label>
-                  <input class="form-control" type="text" id="phone_number" name="phone_number" required>
+                  <label for="phone_number_s1" class="form-label about-description">Phone Number/Whatsapp</label>
+                  <input class="form-control" type="text" id="phone_number_s1" name="phone_number_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="email_address" class="form-label about-description">Email Address</label>
-                  <input class="form-control" type="email" id="email_address" name="email_address" required>
+                  <label for="email_address_s1" class="form-label about-description">Email Address</label>
+                  <input class="form-control" type="email" id="email_address_s1" name="email_address_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="photo" class="form-label about-description">Upload Your Photo</label>
-                  <input type="file" class="form-control" id="photo" name="photo" required>
+                  <label for="photo_s1" class="form-label about-description">Upload Your Photo</label>
+                  <input type="file" class="form-control" id="photo_s1" name="photo_s1" required>
                 </div>
                 <div class="mb-4">
-                  <label for="id_student_card" class="form-label about-description">Upload Your ID Student Card</label>
-                  <input type="file" class="form-control" id="id_student_card" name="id_student_card" required>
+                  <label for="id_student_card_s1" class="form-label about-description">Upload Your ID Student Card</label>
+                  <input type="file" class="form-control" id="id_student_card_s1" name="id_student_card_s1" required>
                 </div>
               </div>
               
@@ -152,48 +153,48 @@
               <div class="speaker-container mb-4">
                 <p class="form-label about-description speaker-title">Speaker 2</p>
                 <div class="mb-4">
-                  <label for="full_name" class="form-label about-description">Full Name</label>
-                  <input type="text" class="form-control" id="full_name" name="full_name" required>
+                  <label for="full_name_s2" class="form-label about-description">Full Name</label>
+                  <input type="text" class="form-control" id="full_name_s2" name="full_name_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="gender" class="form-label about-description">Gender</label>
-                  <input type="text" class="form-control" id="gender" name="gender" required>
+                  <label for="gender_s2" class="form-label about-description">Gender</label>
+                  <input type="text" class="form-control" id="gender_s2" name="gender_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="student_id_number" class="form-label about-description">Student ID Number</label>
-                  <input type="text" class="form-control" id="student_id_number" name="student_id_number" required>
+                  <label for="student_id_number_s2" class="form-label about-description">Student ID Number</label>
+                  <input type="text" class="form-control" id="student_id_number_s2" name="student_id_number_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="major" class="form-label about-description">Major</label>
-                  <input class="form-control" type="text" id="major" name="major" required>
+                  <label for="major_s2" class="form-label about-description">Major</label>
+                  <input class="form-control" type="text" id="major_s2" name="major_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="faculty" class="form-label about-description">Faculty</label>
-                  <input class="form-control" type="text" id="faculty" name="faculty" required>
+                  <label for="faculty_s2" class="form-label about-description">Faculty</label>
+                  <input class="form-control" type="text" id="faculty_s2" name="faculty_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="university" class="form-label about-description">University</label>
-                  <input class="form-control" type="text" id="university" name="university" required>
+                  <label for="university_s2" class="form-label about-description">University</label>
+                  <input class="form-control" type="text" id="university_s2" name="university_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="nationality" class="form-label about-description">Nationality</label>
-                  <input class="form-control" type="text" id="nationality" name="nationality" required>
+                  <label for="nationality_s2" class="form-label about-description">Nationality</label>
+                  <input class="form-control" type="text" id="nationality_s2" name="nationality_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="phone_number" class="form-label about-description">Phone Number/Whatsapp</label>
-                  <input class="form-control" type="text" id="phone_number" name="phone_number" required>
+                  <label for="phone_number_s2" class="form-label about-description">Phone Number/Whatsapp</label>
+                  <input class="form-control" type="text" id="phone_number_s2" name="phone_number_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="email_address" class="form-label about-description">Email Address</label>
-                  <input class="form-control" type="email" id="email_address" name="email_address" required>
+                  <label for="email_address_s2" class="form-label about-description">Email Address</label>
+                  <input class="form-control" type="email" id="email_address_s2" name="email_address_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="photo" class="form-label about-description">Upload Your Photo</label>
-                  <input type="file" class="form-control" id="photo" name="photo" required>
+                  <label for="photo_s2" class="form-label about-description">Upload Your Photo</label>
+                  <input type="file" class="form-control" id="photo_s2" name="photo_s2" required>
                 </div>
                 <div class="mb-4">
-                  <label for="id_student_card" class="form-label about-description">Upload Your ID Student Card</label>
-                  <input type="file" class="form-control" id="id_student_card" name="id_student_card" required>
+                  <label for="id_student_card_s2" class="form-label about-description">Upload Your ID Student Card</label>
+                  <input type="file" class="form-control" id="id_student_card_s2" name="id_student_card_s2" required>
                 </div>
               </div>
 
@@ -227,7 +228,60 @@
       </div>
     </div>
   </div>
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah form dari reload halaman
 
+        let formData = new FormData(this);
+        let errorMessageElement = document.getElementById('error-message');
+        
+        fetch('{{ route("debate.store") }}', {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(errorData => {
+                    throw errorData;
+                });
+            }
+            return response.json(); // Mengembalikan data JSON jika tidak ada error
+        })
+        .then(data => {
+            // Jika berhasil, sembunyikan pesan error dan tampilkan pesan sukses
+            errorMessageElement.classList.add('d-none');
+            alert('Registration successful!');
+            console.log(data);
+        })
+        .catch(errorData => {
+            // Tampilkan pesan kesalahan dari backend
+            let errorMessage = 'An error occurred. Please try again.';
+            if (errorData && errorData.errors) {
+                errorMessage = Object.values(errorData.errors).map(error => error.join('<br>')).join('<br>');
+            }
+            errorMessageElement.innerHTML = errorMessage;
+            errorMessageElement.classList.remove('d-none');
+        });
+    });
+</script>
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+  // Cegah form submit jika ada input yang tidak valid
+  if (!this.checkValidity()) {
+    event.preventDefault();
+    event.stopPropagation();
+  } else {
+    // Jika form valid, tampilkan alert sukses
+    event.preventDefault(); // Cegah submit form default
+    document.getElementById('berhasil').style.display = 'block'; // Tampilkan alert
+  }
+  // Tambahkan kelas untuk menampilkan validasi HTML5
+  this.classList.add('was-validated');
+});
+</script>
 <style>
   /* Style untuk container Speaker */
   .speaker-container {
