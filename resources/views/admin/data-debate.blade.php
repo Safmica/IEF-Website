@@ -153,11 +153,14 @@
                         <div class="card-body dortmund">
 
                             <!-- Menampilkan data barang di dalam tabel -->
+                            <!-- Tabel Data -->
+                            <!-- Tabel Data -->
+                            <!-- Tabel Data -->
                             <table id="datatablesSimple" class="text-dark">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama</th>
+                                        <th>Nama Team</th>
                                         <th>Competition</th>
                                         <th>Bukti Pembayaran</th>
                                     </tr>
@@ -169,32 +172,12 @@
                                         <td>{{ $debate->team_name }}</td> <!-- Nama tim -->
                                         <td>Debate</td> <!-- Static 'Debate' value -->
                                         <td>
-                                            @php
-                                            // Mendapatkan nama file dari URL atau path yang disimpan di database
-                                            $fileUrl = basename($debate->registration_proof);
-                                            // Membuat URL untuk file di storage private
-                                            $downloadUrl = route('download.registration_proof', ['filename' => $fileUrl]);
-                                            // Mendapatkan ekstensi file
-                                            $fileExtension = pathinfo($debate->registration_proof, PATHINFO_EXTENSION);
-                                            @endphp
-
-                                            @if(in_array(strtolower($fileExtension), ['jpg', 'jpeg', 'png', 'gif']))
-                                            <!-- Jika file adalah gambar -->
-                                            <img src="{{ $downloadUrl }}" alt="Bukti Pembayaran" width="100">
-                                            @elseif(strtolower($fileExtension) == 'pdf')
-                                            <!-- Jika file adalah PDF -->
-                                            <a href="{{ $downloadUrl }}" target="_blank">Lihat PDF</a>
-                                            @else
-                                            <!-- Jika file bukan gambar atau PDF -->
-                                            <a href="{{ $downloadUrl }}" target="_blank">Unduh File</a>
-                                            @endif
+                                            <a href="{{ $debate->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
                                         </td>
-
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
                 </div>

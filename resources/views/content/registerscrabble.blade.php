@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/checkLogin.js') }}"></script>
     <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
-    <script src="{{ asset('js/checkNotRegistered.js') }}"></script>
+    <script src="{{ asset('js/checkNotRegisteredScrabble.js') }}"></script>
 </head>
 <body class="bg-black">
 <header>

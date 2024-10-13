@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/checkLogin.js') }}"></script>
-    <script src="{{ asset('js/checkRegistered.js') }}"></script>
+    <script src="{{ asset('js/checkRegisteredScrabble.js') }}"></script>
     <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom CSS -->

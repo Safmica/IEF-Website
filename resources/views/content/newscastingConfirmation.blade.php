@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/checkLogin.js') }}"></script>
-    <script src="{{ asset('js/checkRegistered.js') }}"></script>
+    <script src="{{ asset('js/checkRegisteredNewscasting.js') }}"></script>
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
