@@ -11,6 +11,7 @@
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="icon" href="images/assets/ief2024.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
     <script src="{{ asset('js/checkLogin.js') }}"></script>
     <script src="{{ asset('js/checkNotRegistered.js') }}"></script>
 </head>

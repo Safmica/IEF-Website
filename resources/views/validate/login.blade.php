@@ -7,6 +7,7 @@
     
         <!-- Link CSS -->
         <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+        <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
     
         <!-- SweetAlert2 CSS & JS -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

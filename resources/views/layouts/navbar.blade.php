@@ -117,7 +117,7 @@ window.onload = function () {
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="{{ asset('images/assets/ief2024.png') }}" alt="Logo" width="50" height="50" class="d-inline-block align-text-center me-2">
+            <img src="{{ asset('images/assets/logo_ief_small.png') }}" alt="Logo" width="50" height="50" class="d-inline-block align-text-center me-2">
             IEF 2024
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

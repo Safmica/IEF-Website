@@ -23,7 +23,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/assets/ief2024.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
 </head>
 
 <body>

@@ -14,6 +14,7 @@
     <script src="{{ asset('js/checkAdmin.js') }}"></script>
 
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
 
     <style>
         @font-face {

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Under Verification</title>
+    <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <!-- Bootstrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
