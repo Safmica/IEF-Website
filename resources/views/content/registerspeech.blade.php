@@ -160,6 +160,10 @@
                 <input type="checkbox" id="agree_participation" name="agree_participation" required>
                 <label for="agree_participation">I agree to participate in the entire selection process until the end of the Speech Competition International English Festival 2024.</label>
               </div>
+              <div class="checkbox-label mb-4">
+                <input type="checkbox" id="agree_final_decision" name="agree_final_decision" required>
+                <label for="agree_final_decision">I understand that the app’s (Woogles.io) decision is final and cannot be contested.</label>
+              </div>
               <div class="d-grid">
                 <button type="submit" class="btn btn-gradient">REGIST</button>
               </div>

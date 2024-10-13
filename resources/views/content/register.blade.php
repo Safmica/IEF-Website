@@ -25,6 +25,25 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/checkLogin.js') }}"></script>
     <style>
+    .status-registered {
+    background-color: rgba(0, 128, 0, 0.1); /* Light green background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding for better spacing */
+}
+
+.status-verification {
+    background-color: rgba(255, 255, 0, 0.3); /* Light yellow background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding for better spacing */
+}
+
+.status-not-registered {
+    background-color: rgba(255, 0, 0, 0.1); /* Light red background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding for better spacing */
+}
+
+
         .competition-section {
             margin-top: 10%;
             text-align: center;
@@ -124,7 +143,6 @@
             }
         }
     </style>
-    
 </head>
 
 <body>
@@ -146,14 +164,14 @@
                         <p class="card-text">Debate competition focusing on critical thinking and eloquence. Each team consists of 3 participants.</p>
                     </div>
                     <div>
-                      <p>Status : Tidak Daftar</p>
+                      <p id="debate-status" data-competition="debate">Status</p>
                     </div>
                     <div class="card-footer">
                         <div>
                             <p><strong>HTM:</strong> Rp 150.000</p>
                             <p><strong>Participants:</strong> 2 per team</p>
                         </div>
-                        <a href="{{ url('register-debate') }}" class="btn btn-details">Register</a>
+                        <a href="#" onclick="redirectToRegistration('debate')" class="btn btn-details">Register</a>
                     </div>
                 </div>
             </div>
@@ -167,14 +185,14 @@
                         <p class="card-text">A platform for public speaking, where participants deliver speeches on specific topics.</p>
                     </div>
                     <div>
-                      <p>Status : Tidak Daftar</p>
+                      <p id="speech-status">Status : Tidak Daftar</p>
                     </div>
                     <div class="card-footer">
                         <div>
                             <p><strong>HTM:</strong> Rp 100.000</p>
                             <p><strong>Participants:</strong> 1 per person</p>
                         </div>
-                        <a href="{{ url('register-speech') }}" class="btn btn-details">Register</a>
+                        <a href="#" onclick="redirectToRegistration('speech')" class="btn btn-details">Register</a>
                     </div>
                 </div>
             </div>
@@ -188,14 +206,14 @@
                         <p class="card-text">A game of words that tests your vocabulary and strategy. Each game consists of 2 players.</p>
                     </div>
                     <div>
-                      <p>Status : Tidak Daftar</p>
+                      <p id="scrabble-status">Status : Tidak Daftar</p>
                     </div>
                     <div class="card-footer">
                         <div>
                             <p><strong>HTM:</strong> Rp 120.000</p>
                             <p><strong>Participants:</strong> 2 per game</p>
                         </div>
-                        <a href="{{ url('register-scrabble') }}" class="btn btn-details">Register</a>
+                        <a href="#" onclick="redirectToRegistration('scrabble')" class="btn btn-details">Register</a>
                     </div>
                 </div>
             </div>
@@ -209,14 +227,14 @@
                         <p class="card-text">A competition where participants simulate a real news broadcast, displaying presentation skills.</p>
                     </div>
                     <div>
-                      <p>Status : Tidak Daftar</p>
+                      <p id="newscasting-status">Status : Tidak Daftar</p>
                     </div>
                     <div class="card-footer">
                         <div>
                             <p><strong>HTM:</strong> Rp 130.000</p>
                             <p><strong>Participants:</strong> 1 per person</p>
                         </div>
-                        <a href="{{ url('register-newscasting') }}" class="btn btn-details">Register</a>
+                        <a href="#" onclick="redirectToRegistration('newscasting')" class="btn btn-details">Register</a>
                     </div>
                 </div>
             </div>
@@ -224,6 +242,104 @@
         </div>
     </div>
 
+    <script>
+    window.addEventListener('load', function () {
+      loadUserData();
+      anotherFunction();
+    });
+
+    function loadUserData() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    console.log(user); // Log the user object to see if it's retrieved correctly
+
+    if (user) {
+        const scrabbleStatus = document.getElementById('scrabble-status');
+        const debateStatus = document.getElementById('debate-status');
+        const speechStatus = document.getElementById('speech-status');
+        const newscastingStatus = document.getElementById('newscasting-status');
+
+        // Function to set status and apply color class
+        function setStatus(element, status) {
+            element.textContent = status;
+            element.classList.remove('status-registered', 'status-verification', 'status-not-registered'); // Remove all classes
+            switch (status) {
+                case 'Registered':
+                    element.classList.add('status-registered');
+                    break;
+                case 'Verification':
+                    element.classList.add('status-verification');
+                    break;
+                case 'Not Registered':
+                    element.classList.add('status-not-registered');
+                    break;
+                default:
+                    element.textContent = 'Unknown Status'; // Default case
+            }
+        }
+
+        // Set status for each competition
+        if (scrabbleStatus) setStatus(scrabbleStatus, user.scrabble || 'Not Registered');
+        if (debateStatus) setStatus(debateStatus, user.debate || 'Not Registered');
+        if (speechStatus) setStatus(speechStatus, user.speech || 'Not Registered');
+        if (newscastingStatus) setStatus(newscastingStatus, user.newscasting || 'Not Registered');
+    } else {
+        console.log('No user data found in localStorage.');
+    }
+}
+
+function redirectToRegistration(competition) {
+    const user = JSON.parse(localStorage.getItem('user'));
+    let redirectUrl;
+
+    // Determine the redirect URL based on the user's status
+    switch (competition) {
+        case 'debate':
+            if (user.debate === 'Registered') {
+                redirectUrl = '/debate-confirmation'; // Change to your actual confirmation page
+            } else if (user.debate === 'Verification') {
+                redirectUrl = '/verification'; // Change to your verification page
+            } else {
+                redirectUrl = '/register-debate'; // Registration page
+            }
+            break;
+        case 'speech':
+            if (user.speech === 'Registered') {
+                redirectUrl = '/speech-confirmation';
+            } else if (user.speech === 'Verification') {
+                redirectUrl = '/verification';
+            } else {
+                redirectUrl = '/register-speech';
+            }
+            break;
+        case 'scrabble':
+            if (user.scrabble === 'Registered') {
+                redirectUrl = '/scrabble-confirmation';
+            } else if (user.scrabble === 'Verification') {
+                redirectUrl = '/verification';
+            } else {
+                redirectUrl = '/register-scrabble';
+            }
+            break;
+        case 'newscasting':
+            if (user.newscasting === 'Registered') {
+                redirectUrl = '/newscasting-confirmation';
+            } else if (user.newscasting === 'Verification') {
+                redirectUrl = '/verification';
+            } else {
+                redirectUrl = '/register-newscasting';
+            }
+            break;
+        default:
+            redirectUrl = '/'; // Fallback to home or error page
+            break;
+    }
+
+    // Redirect to the determined URL
+    window.location.href = redirectUrl;
+}
+    </script>
+  
+  
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -13,6 +13,11 @@ Route::get('/welcome', [Controller::class, 'welcome']);
 Route::get('/competition', [Controller::class, 'competition']);
 Route::get('/about', [Controller::class, 'about']);
 Route::get('/faq', [Controller::class, 'faq']);
+Route::get('/verification', [Controller::class, 'verification']);
+Route::get('/scrabble-confirmation', [Controller::class, 'scrabbleConfirmation']);
+Route::get('/debate-confirmation', [Controller::class, 'debateConfirmation']);
+Route::get('/newscasting-confirmation', [Controller::class, 'newscastingConfirmation']);
+Route::get('/speech-confirmation', [Controller::class, 'speechConfirmation']);
 
 Route::group(['routeMiddleware' => 'check.login'], function () {
     Route::get('/register', [Controller::class, 'register']);

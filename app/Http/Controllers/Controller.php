@@ -33,6 +33,25 @@ class Controller extends BaseController
     function faq() {
         return view("content/faq");
     }
+    function verification() {
+        return view("content/verification");
+    }
+
+    function scrabbleConfirmation() {
+        return view("content/scrabbleConfirmation");
+    }
+
+    function speechConfirmation() {
+        return view("content/speechConfirmation");
+    }
+
+    function debateConfirmation() {
+        return view("content/debateConfirmation");
+    }
+
+    function newcastingConfirmation() {
+        return view("content/newcastingConfirmation");
+    }
 
     function registerScrabble() {
         return view("content/registerScrabble");
