@@ -188,8 +188,7 @@ a{
     width: 100%;
 }
 
-.guidebook-btn,
-.registration-btn {
+.guidebook-btn{
     background-color: var(--yellow);
     color: var(--white);
     border: none;
@@ -197,6 +196,21 @@ a{
     font-weight: 500;
     cursor: pointer;
     padding: 8px 12px;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 120px; /* Adjusted max-width for smaller buttons */
+    text-align: center;
+}
+
+.registration-btn {
+    background-color: var(--yellow);
+    color: var(--white);
+    border: none;
+    font-family: 'Dortmund', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 7px 15px;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     width: 100%;
@@ -242,7 +256,11 @@ opacity: 0;
     }
 
     .guidebook-btn {
-        width: 100%; 
+        width: 40%; 
+        max-width: none; 
+    }
+    .registration-btn {
+        width: 45%; 
         max-width: none; 
     }
 }
