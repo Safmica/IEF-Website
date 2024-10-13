@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Newscasting;
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Container\Attributes\Storage;
 use Illuminate\Support\Facades\Log;
 
@@ -53,6 +54,7 @@ class NewscastingController extends Controller
             $idStudentCardPath = $request->file('id_student_card')->store('private/id_student_cards');
 
             $data = Newscasting::create([
+                'id_user' => $request->input('id'),
                 'full_name' => $request->input('full_name'),
                 'gender' => $request->input('gender'),
                 'student_id_number' => $request->input('student_id_number'),
@@ -65,6 +67,12 @@ class NewscastingController extends Controller
                 'photo' => route('download', ['folder' => 'photo', 'filename' => basename($photoPath)]),
                 'id_student_card' => route('download', ['folder' => 'id_student_cards', 'filename' => basename($idStudentCardPath)]),
                 'registration_proof' => route('download', ['folder' => 'registration_proofs', 'filename' => basename($registrationProofPath)]),
+            ]);
+
+            $id = $request->input('id');
+
+            User::where('id', $id)->update([
+                'newscasting' => "Verification",
             ]);
 
             return response()->json([

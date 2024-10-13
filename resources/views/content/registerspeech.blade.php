@@ -12,6 +12,7 @@
     <link rel="icon" href="images/assets/ief2024.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/checkLogin.js') }}"></script>
+    <script src="{{ asset('js/checkNotRegistered.js') }}"></script>
 </head>
 <body class="bg-black">
 <header>
@@ -177,60 +178,85 @@
     document.getElementById('registrationForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Mencegah form dari reload halaman
 
+        // Validasi HTML5
+        if (!this.checkValidity()) {
+            // Jika form tidak valid, hentikan dan tampilkan error
+            event.stopPropagation();
+            this.classList.add('was-validated');
+            return;
+        }
+
+        // Buat FormData dari form yang disubmit
         let formData = new FormData(this);
-        let errorMessageElement = document.getElementById('error-message');
         
+        // Ambil data user dari localStorage
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        // Pastikan user ada di localStorage sebelum lanjut
+        if (user) {
+            console.log('Sebelum update user:', user);
+
+            // Ubah user.speech menjadi "Verification"
+            user.speech = "Verification";
+
+            // Tambahkan id ke formData
+            formData.append('id', user.id);
+
+            // Simpan kembali user yang sudah diubah ke localStorage
+            localStorage.setItem('user', JSON.stringify(user));
+
+            console.log('Setelah update user:', JSON.parse(localStorage.getItem('user'))); // Debugging
+        } else {
+            console.error('User tidak ditemukan di localStorage');
+            return; // Hentikan proses jika user tidak ditemukan
+        }
+
+        // Kirim data ke backend menggunakan fetch
         fetch('{{ route("speech.store") }}', {
             method: 'POST',
             headers: {
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
-            body: formData
+            body: formData, 
         })
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(errorData => {
-                    throw errorData;
+        .then(response => response.json())
+        .then(({ success, message }) => { // Destructuring untuk mendapatkan success dan message
+            if (success) {
+                // Tampilkan alert sukses
+                Swal.fire({
+                    title: 'Registration Successful!',
+                    text: 'Your registration has been successfully submitted.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    // Redirect atau lakukan aksi lain setelah sukses
+                    window.location.href = '/verification'; // Ganti dengan URL yang sesuai
+                });
+            } else {
+                // Tampilkan pesan kesalahan dari backend
+                Swal.fire({
+                    title: 'Registration Failed!',
+                    text: message || 'Please try again.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
                 });
             }
-            return response.json(); // Mengembalikan data JSON jika tidak ada error
         })
-        .then(data => {
-            // Jika berhasil, sembunyikan pesan error dan tampilkan pesan sukses
-            errorMessageElement.classList.add('d-none');
-            alert('Registration successful!');
-            console.log(data);
-        })
-        .catch(errorData => {
-            // Tampilkan pesan kesalahan dari backend
-            let errorMessage = 'An error occurred. Please try again.';
-            if (errorData && errorData.errors) {
-                errorMessage = Object.values(errorData.errors).map(error => error.join('<br>')).join('<br>');
-            }
-            errorMessageElement.innerHTML = errorMessage;
-            errorMessageElement.classList.remove('d-none');
+        .catch(error => {
+            console.error('Error during fetch:', error);
+            Swal.fire({
+                title: 'Error!',
+                text: 'An error occurred while submitting the form. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
         });
     });
-</script>
+</script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/materialize.min.js"></script>
 <script src="js/about.js"></script>
-<script>
-  document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    // Cegah form submit jika ada input yang tidak valid
-    if (!this.checkValidity()) {
-      event.preventDefault();
-      event.stopPropagation();
-    } else {
-      // Jika form valid, tampilkan alert sukses
-      event.preventDefault(); // Cegah submit form default
-      document.getElementById('berhasil').style.display = 'block'; // Tampilkan alert
-    }
-    // Tambahkan kelas untuk menampilkan validasi HTML5
-    this.classList.add('was-validated');
-  });
-</script>
 </body>
 </html>

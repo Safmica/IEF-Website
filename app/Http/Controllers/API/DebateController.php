@@ -30,7 +30,7 @@ class DebateController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, int $id)
+    public function store(Request $request)
     {
         try {
             Log::info("Before validation");
@@ -61,6 +61,8 @@ class DebateController extends Controller
                 'registration_proof' => 'required|file|mimes:jpeg,png,jpg,pdf|max:2048',
             ]);
 
+            Log::info("AFTER validation");
+
             $registrationProofPath = $request->file('registration_proof')->store('private/registration_proofs');
             $photoPath1 = $request->file('photo_s1')->store('private/photo');
             $idStudentCardPath1 = $request->file('id_student_card_s1')->store('private/id_student_cards');
@@ -68,6 +70,7 @@ class DebateController extends Controller
             $idStudentCardPath2 = $request->file('id_student_card_s2')->store('private/id_student_cards');
 
             $data = Debate::create([
+                'id_user' => $request->input('id'),
                 'team_name' => $request->input('team_name'),
                 'full_name_s1' => $request->input('full_name_s1'),
                 'gender_s1' => $request->input('gender_s1'),
@@ -94,8 +97,10 @@ class DebateController extends Controller
                 'registration_proof' => route('download', ['folder' => 'registration_proofs', 'filename' => basename($registrationProofPath)]),
             ]);
 
+            $id = $request->input('id');
+
             User::where('id', $id)->update([
-                'debate' => "Validation",
+                'debate' => "Verification",
             ]);
 
             return response()->json([

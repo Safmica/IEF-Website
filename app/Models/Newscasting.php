@@ -10,6 +10,7 @@ class Newscasting extends Model
     use HasFactory;
     protected $table = "regist_newscasting";
     protected $fillable = [
+        'id_user',
         'full_name', 
         'gender', 
         'student_id_number', 

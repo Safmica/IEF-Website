@@ -10,6 +10,7 @@ class Scrabble extends Model
     use HasFactory;
     protected $table = "regist_scrabble";
     protected $fillable = [
+        'id_user',
         'full_name', 
         'gender', 
         'student_id_number', 

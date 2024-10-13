@@ -10,6 +10,7 @@ class Debate extends Model
     use HasFactory;
     protected $table = "regist_debate";
     protected $fillable = [
+        'id_user',
         'team_name', 
         'full_name_s1', 
         'gender_s1', 

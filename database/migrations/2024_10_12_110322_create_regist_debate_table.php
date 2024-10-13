@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('regist_debate', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_user');
             $table->string('team_name', 255);
             $table->string('full_name_s1', 255);
             $table->string('gender_s1', 50);

@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/checkLogin.js') }}"></script>
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/checkVerification.js') }}"></script>
     <!-- Custom CSS -->
     <style>
         body {
@@ -18,7 +19,7 @@
         }
 
         .container {
-            margin-top: 5%;
+            margin-top: 7%;
             padding: 20px;
             border-radius: 10px;
             background-color: #fff;
@@ -49,6 +50,13 @@
         .competition-title {
             margin-top: 10px;
             font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 678px) {
+            .container {
+                margin-top: 20%;
+            }
         }
     </style>
 </head>
@@ -66,32 +74,32 @@
             <div class="col-md-6">
                 <div class="contact-card">
                     <h5 class="competition-title">Debate</h5>
-                    <p class="contact-person">Name: <strong>John Doe</strong></p>
-                    <p>Phone: <strong>(123) 456-7890</strong></p>
+                    <p>Fakhri: <strong>0821-7295-6173</strong></p>
+                    <p>Nadhira: <strong>0831-8428-1701</strong></p>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="contact-card">
                     <h5 class="competition-title">Speech</h5>
-                    <p class="contact-person">Name: <strong>Jane Smith</strong></p>
-                    <p>Phone: <strong>(098) 765-4321</strong></p>
+                    <p>Eka: <strong>0895-3249-85585</strong></p>
+                    <p>Sarah: <strong>0823-3089-4841</strong></p>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="contact-card">
                     <h5 class="competition-title">Scrabble</h5>
-                    <p class="contact-person">Name: <strong>Mike Johnson</strong></p>
-                    <p>Phone: <strong>(555) 123-4567</strong></p>
+                    <p>Fathir: <strong>0823-7600-8881</strong></p>
+                    <p>Hera: <strong>0877-4843-2023</strong></p>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="contact-card">
                     <h5 class="competition-title">Newscasting</h5>
-                    <p class="contact-person">Name: <strong>Emily Davis</strong></p>
-                    <p>Phone: <strong>(444) 321-9876</strong></p>
+                    <p>Azmi: <strong>0821-8120-8305</strong></p>
+                    <p>Adetya: <strong>0812-5063-7184</strong></p>
                 </div>
             </div>
         </div>

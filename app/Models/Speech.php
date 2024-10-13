@@ -10,6 +10,7 @@ class Speech extends Model
     use HasFactory;
     protected $table = "regist_speech";
     protected $fillable = [
+        'id_user',
         'full_name', 
         'gender', 
         'student_id_number', 

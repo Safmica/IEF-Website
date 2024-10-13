@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Scrabble;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Container\Attributes\Storage;
 use Illuminate\Support\Facades\Log;
@@ -54,6 +55,7 @@ class ScrabbleController extends Controller
             $idStudentCardPath = $request->file('id_student_card')->store('private/id_student_cards');
 
             $data = Scrabble::create([
+                'id_user' => $request->input('id'),
                 'full_name' => $request->input('full_name'),
                 'gender' => $request->input('gender'),
                 'student_id_number' => $request->input('student_id_number'),
@@ -66,6 +68,12 @@ class ScrabbleController extends Controller
                 'photo' => route('download', ['folder' => 'photo', 'filename' => basename($photoPath)]),
                 'id_student_card' => route('download', ['folder' => 'id_student_cards', 'filename' => basename($idStudentCardPath)]),
                 'registration_proof' => route('download', ['folder' => 'registration_proofs', 'filename' => basename($registrationProofPath)]),
+            ]);
+
+            $id = $request->input('id');
+
+            User::where('id', $id)->update([
+                'scrabble' => "Verification",
             ]);
 
             return response()->json([

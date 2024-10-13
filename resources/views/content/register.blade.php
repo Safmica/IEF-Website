@@ -83,8 +83,6 @@
         }
 
         .card-footer {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
             padding-top: 10px;
             border-top: 1px solid #e0e0e0;
@@ -124,11 +122,6 @@
 
             .btn-details {
                 padding: 8px 15px;
-            }
-
-            .card-footer {
-                flex-direction: column;
-                align-items: flex-start;
             }
 
             .btn-details {
@@ -220,7 +213,7 @@
 
             <!-- Newscasting Card -->
             <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
-                <div class="card competition-card">
+                <div class="card competition-card justify-center">
                     <img src="/images/assets/newcasting.jpg" class="card-img-top" alt="Newscasting Image">
                     <div class="card-body">
                         <h5 class="card-title">Newscasting</h5>
@@ -230,13 +223,15 @@
                       <p id="newscasting-status">Status : Tidak Daftar</p>
                     </div>
                     <div class="card-footer">
-                        <div>
+                        <div class="justify-center">
                             <p><strong>HTM:</strong> Rp 130.000</p>
                             <p><strong>Participants:</strong> 1 per person</p>
                         </div>
+                      </div>
+                      <div class="justify-center">
                         <a href="#" onclick="redirectToRegistration('newscasting')" class="btn btn-details">Register</a>
+                      </div>
                     </div>
-                </div>
             </div>
 
         </div>

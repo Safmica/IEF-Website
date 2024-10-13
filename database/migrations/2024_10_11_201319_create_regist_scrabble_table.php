@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('regist_scrabble', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_user');
             $table->string('full_name', 255);
             $table->string('gender', 50);
             $table->string('student_id_number', 100);
