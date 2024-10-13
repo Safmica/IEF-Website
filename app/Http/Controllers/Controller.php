@@ -88,4 +88,24 @@ class Controller extends BaseController
     {
         return view("admin/manage-account");
     }
+
+    function dataspeech()
+    {
+        return view("admin/data-speech");
+    }
+
+    function datadebate()
+    {
+        return view("admin/data-debate");
+    }
+
+    function datanewscasting()
+    {
+        return view("admin/data-newscasting");
+    }
+
+    function datascrable()
+    {
+        return view("admin/data-scrable");
+    }
 }
