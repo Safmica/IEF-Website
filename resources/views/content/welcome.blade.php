@@ -12,6 +12,8 @@
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="{{ asset('css/navbar.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/checkLogin.js') }}"></script>
 </head>
 
 <body>

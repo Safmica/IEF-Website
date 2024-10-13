@@ -17,6 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('scrabble')->default('Tidak Daftar');
+            $table->string('debate')->default('Tidak Daftar');
+            $table->string('speech')->default('Tidak Daftar');
+            $table->string('newscasting')->default('Tidak Daftar');
+            $table->string('role')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });

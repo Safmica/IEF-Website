@@ -13,9 +13,8 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-//Endpoint Register dan Login
-Route::post('SignUp', \App\Http\Controllers\API\SignUpController::class);
-Route::post('login', \App\Http\Controllers\API\LoginController::class);
+Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
+Route::post('/login', [AuthController::class, 'loginUser'])->name('login');
 
 Route::post('/scrabble', [ScrabbleController::class, 'store'])->name('scrabble.store');
 Route::post('/speech', [SpeechController::class, 'store'])->name('speech.store');

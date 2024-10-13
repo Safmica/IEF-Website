@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/competition.css">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
@@ -22,8 +23,8 @@
 </head>
 <body>
     <header>
-    @include('layouts.navbar')
-</header>
+        @include('layouts.navbar')
+    </header>
     {{-- CONTENT --}}
     <div class="slider">
         <div class="list">
@@ -56,8 +57,8 @@ Debate competition IEF 2024 is open for all students at the university level in 
     </div>
 
     <div class="button-group">
-        <button class="guidebook-btn">Guidebook</button>
-        <button class="registration-btn">Registration</button>
+        <a href="" class="cta-btn">Guidebook</a>
+        <a href="/register-debate" class="cta-btn">Register</a>
     </div>
 </div>
 
@@ -93,8 +94,8 @@ Debate competition IEF 2024 is open for all students at the university level in 
                         </div>
                     
                         <div class="button-group">
-                            <button class="guidebook-btn">Guidebook</button>
-                            <button class="registration-btn">Registration</button>
+                            <a href="" class="cta-btn">Guidebook</a>
+                            <a href="/register-speech" class="cta-btn">Register</a>
                         </div>
                     </div>
                 </div>
@@ -127,8 +128,8 @@ Debate competition IEF 2024 is open for all students at the university level in 
                             </div>
                         
                             <div class="button-group">
-                                <button class="guidebook-btn">Guidebook</button>
-                                <button class="registration-btn">Registration</button>
+                                <a href="" class="cta-btn">Guidebook</a>
+                                <a href="/register-newscasting" class="cta-btn">Register</a>
                             </div>
                         </div>
 
@@ -163,8 +164,8 @@ Debate competition IEF 2024 is open for all students at the university level in 
                                             </div>
                                         
                                             <div class="button-group">
-                                                <button class="guidebook-btn">Guidebook</button>
-                                                <button class="registration-btn">Registration</button>
+                                                <a href="" class="cta-btn">Guidebook</a>
+                                                <a href="/register-scrabble" class="cta-btn">Register</a>
                                             </div>
                                         </div>
                 </div>
@@ -306,6 +307,18 @@ Debate competition IEF 2024 is open for all students at the university level in 
 
 </div>
 
+<footer>
+    @include('layouts.footer')
+</footer>
+{{-- Data AOS --}}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    </script>
+    {{-- Data AOS End --}}
+
+    <!-- Bootstrap JS -->
+    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

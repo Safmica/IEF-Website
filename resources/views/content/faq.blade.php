@@ -16,6 +16,7 @@
     <!-- Bootstrap and Custom Styles -->
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
 
     <!-- AOS (Animate On Scroll) for Animations -->
@@ -62,7 +63,14 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        @include('layouts.footer')
+    </footer>
+    {{-- Data AOS --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        </script>
     <script>
         const faqSections = document.querySelectorAll('.faq-section');
 

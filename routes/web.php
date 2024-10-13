@@ -12,13 +12,15 @@ Route::get('/login', [Controller::class, 'login']);
 Route::get('/welcome', [Controller::class, 'welcome']);
 Route::get('/competition', [Controller::class, 'competition']);
 Route::get('/about', [Controller::class, 'about']);
-Route::get('/register', [Controller::class, 'register']);
 Route::get('/faq', [Controller::class, 'faq']);
-Route::get('/register-scrabble', [Controller::class, 'registerScrabble']);
-Route::get('/register-newscasting', [Controller::class, 'registerNewscasting']);
-Route::get('/register-speech', [Controller::class, 'registerSpeech']);
-Route::get('/register-debate', [Controller::class, 'registerDebate']);
-Route::get('/registercompetition', [Controller::class, 'opsiRegister']);
+
+Route::group(['routeMiddleware' => 'check.login'], function () {
+    Route::get('/register', [Controller::class, 'register']);
+    Route::get('/register-scrabble', [Controller::class, 'registerScrabble']);
+    Route::get('/register-newscasting', [Controller::class, 'registerNewscasting']);
+    Route::get('/register-speech', [Controller::class, 'registerSpeech']);
+    Route::get('/register-debate', [Controller::class, 'registerDebate']);
+});
 
 // Route Admin
 Route::get('/admin/dashboard', [Controller::class, 'admindashboard']);

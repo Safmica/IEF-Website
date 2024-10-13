@@ -22,6 +22,8 @@
     <!-- Icon -->
     <link rel="icon" href="images/assets/ief2024.png" type="image/x-icon">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/checkLogin.js') }}"></script>
     <style>
         .competition-section {
             margin-top: 10%;
@@ -122,6 +124,7 @@
             }
         }
     </style>
+    
 </head>
 
 <body>
@@ -142,6 +145,9 @@
                         <h5 class="card-title">Debate</h5>
                         <p class="card-text">Debate competition focusing on critical thinking and eloquence. Each team consists of 3 participants.</p>
                     </div>
+                    <div>
+                      <p>Status : Tidak Daftar</p>
+                    </div>
                     <div class="card-footer">
                         <div>
                             <p><strong>HTM:</strong> Rp 150.000</p>
@@ -159,6 +165,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Speech</h5>
                         <p class="card-text">A platform for public speaking, where participants deliver speeches on specific topics.</p>
+                    </div>
+                    <div>
+                      <p>Status : Tidak Daftar</p>
                     </div>
                     <div class="card-footer">
                         <div>
@@ -178,6 +187,9 @@
                         <h5 class="card-title">Scrabble</h5>
                         <p class="card-text">A game of words that tests your vocabulary and strategy. Each game consists of 2 players.</p>
                     </div>
+                    <div>
+                      <p>Status : Tidak Daftar</p>
+                    </div>
                     <div class="card-footer">
                         <div>
                             <p><strong>HTM:</strong> Rp 120.000</p>
@@ -195,6 +207,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Newscasting</h5>
                         <p class="card-text">A competition where participants simulate a real news broadcast, displaying presentation skills.</p>
+                    </div>
+                    <div>
+                      <p>Status : Tidak Daftar</p>
                     </div>
                     <div class="card-footer">
                         <div>

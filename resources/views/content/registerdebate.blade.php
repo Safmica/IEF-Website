@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="icon" href="images/assets/ief2024.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/checkLogin.js') }}"></script>
 </head>
 <body class="bg-black">
 <header>
