@@ -24,6 +24,7 @@
                 <input class="input-signup" type="email" name="email" placeholder="Email" required>
                 <input class="input-signup" type="password" name="password" placeholder="Password" required>
                 <input class="input-signup" type="password" name="password_confirmation" placeholder="Confirm Password" required>
+                <p style="color: yellow; font-size: 0.7rem;font-family: Arial, sans-serif; text-align: center;">Password must contain min. 8 char</p>
                 <button type="submit" class="btn-signup">Sign Up</button>
             </form>
         </div>
@@ -96,7 +97,7 @@
         document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent form from reloading the page
             let formData = new FormData(this);
-    
+
             fetch('/api/login', {
                 method: 'POST',
                 headers: {
@@ -114,14 +115,23 @@
             })
             .then(data => {
                 localStorage.setItem('user', JSON.stringify(data.user));
-                // Show success popup and redirect to home page
+                
+                // Check user role and redirect accordingly
+                const user = data.user;
+                let redirectUrl = '/'; // Default redirect to home
+                
+                if (user && user.role === 'admin') {
+                    redirectUrl = '/admin/dashboard'; // Redirect to admin dashboard
+                }
+
+                // Show success popup and redirect to the appropriate page
                 Swal.fire({
                     icon: 'success',
                     title: 'Login successful!',
-                    text: 'You will be redirected to the homepage.',
+                    text: 'You will be redirected.',
                     confirmButtonText: 'OK'
                 }).then(() => {
-                    window.location.href = '/'; // Redirect to home page on successful login
+                    window.location.href = redirectUrl; // Redirect to the appropriate page
                 });
             })
             .catch(errorData => {
@@ -134,7 +144,7 @@
                 } else if (errorData && errorData.message) {
                     errorMessage = errorData.message;  // Use general error message
                 }
-    
+
                 Swal.fire({
                     icon: 'error',
                     title: 'Login failed!',
