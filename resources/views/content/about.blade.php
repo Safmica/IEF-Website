@@ -6,24 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us</title>
-    <link rel="stylesheet" href='https://unpkg.com/boxicons@latest/css/boxicons.min.css'>
-    <link rel="stylesheet" href="css/about.css">
+
+    <!-- Google Fonts and Boxicons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Bootstrap and Custom Styles -->
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link rel="icon" href="images/assets/ief2024.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- AOS (Animate On Scroll) for Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/assets/ief2024.png') }}" type="image/x-icon">
 </head>
 
 <body>
+    <!-- Navbar Include -->
     <header>
         @include('layouts.navbar')
     </header>
 
+    <!-- About Section -->
     <section class="about-section">
         <div class="about-content">
             <div class="about-video">
-                <iframe width="720" height="400" src="https://www.youtube.com/embed//jhRoM2j4DIU"
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <!-- Video Embed -->
+                <iframe width="720" height="400" src="https://www.youtube.com/embed/jhRoM2j4DIU" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
             </div>
 
             <h2 class="about-title">About IEF 2024</h2>
@@ -37,23 +54,21 @@
         </div>
     </section>
 
-    <section class="cta-section">
-        <div class="about-content">
-            <h2>Ready to Join?</h2>
-            <p>Don't miss your chance to participate in IEF 2024 and showcase your English skills to the world. Register now and become part of this exciting international competition!</p>
-            <a href="FORM REGISTRASI" class="cta-btn">Register Now</a>
-        </div>
-    </section>
-
     <footer>
-        <p>&copy; 2024 IEF - International English Festival. All Rights Reserved.</p>
+        @include('layouts.footer')
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/materialize.min.js"></script>
-    <script src="js/about.js"></script>
+    {{-- Data AOS --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        </script>
+        {{-- Data AOS End --}}
+
+        <!-- Bootstrap JS -->
+        <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
 </html>

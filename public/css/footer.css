@@ -1,0 +1,103 @@
+:root {
+    /* Color Variables */
+    --bluesoft: #f4fafd;
+    --softpink: #fff6ed;
+    --softgreen: #e7e5d0;
+    --softblue: #224faa;
+    --blue: #224faa;
+    --yellow: #f4c253;
+    --grey: #555555;
+    --darkgrey: #949293;
+
+    /* Font Weight Variables */
+    --fwextrabold: 800;
+    --fwbold: 700;
+    --fwsemibold: 600;
+    --fwmedium: 500;
+    --fwregular: 400;
+    --fwlight: 300;
+}
+
+/* Font Face Definitions */
+@font-face {
+    font-family: "freshman";
+    src: url("/fonts/freshman/freshman.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "dortmund";
+    src: url("/fonts/dortmund/Dortmund-ExtraBold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.cta-section {
+    background-color: var(--blue);
+    color: white;
+    text-align: justify;
+}
+
+.cta-section h2 {
+    font-family: "freshman";
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 12px 20px;
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: var(--fwsemibold);
+    border-radius: 50px;
+    border: 0;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #ffdd70;
+}
+
+/* Footer */
+footer {
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .about-video iframe {
+        height: 250px;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-description {
+        font-size: 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 28px;
+    }
+}

@@ -19,10 +19,10 @@
                     <a class="nav-link" aria-current="page" href="/competition">Competitions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../All Teams/index.html">Timeline</a>
+                    <a class="nav-link" href="../All Teams/index.html">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/faq">FAQ</a>
+                    <a class="nav-link" aria-current="page" href="/faq">Register</a>
                 </li>
                 <li class="nav-item">
                     <a href="/login" class="btn-signin">Sign In</a>
