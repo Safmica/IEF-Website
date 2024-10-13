@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DebateController;
+use Illuminate\Support\Facades\Storage;
 
 Route::get('/', function () {
     return view('home');
@@ -37,3 +39,5 @@ Route::get('/admin/data-newscasting', [Controller::class, 'datanewscasting']);
 Route::get('/admin/data-scrable', [Controller::class, 'datascrable']);
 
 Route::resource('admin', adminController::class);
+
+Route::get('/admin/data-debate', [DebateController::class, 'index']);
