@@ -7,6 +7,7 @@ use App\Models\Debate;
 use Illuminate\Http\Request;
 use Illuminate\Container\Attributes\Storage;
 use Illuminate\Support\Facades\Log;
+use App\Models\User;
 
 class DebateController extends Controller
 {
@@ -29,7 +30,7 @@ class DebateController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, int $id)
     {
         try {
             Log::info("Before validation");
@@ -91,6 +92,10 @@ class DebateController extends Controller
                 'photo_s2' => route('download', ['folder' => 'photo', 'filename' => basename($photoPath2)]),
                 'id_student_card_s2' => route('download', ['folder' => 'id_student_cards', 'filename' => basename($idStudentCardPath2)]),
                 'registration_proof' => route('download', ['folder' => 'registration_proofs', 'filename' => basename($registrationProofPath)]),
+            ]);
+
+            User::where('id', $id)->update([
+                'debate' => "Validation",
             ]);
 
             return response()->json([
