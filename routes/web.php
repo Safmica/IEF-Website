@@ -31,5 +31,9 @@ Route::group(['routeMiddleware' => 'check.login'], function () {
 Route::get('/admin/dashboard', [Controller::class, 'admindashboard']);
 Route::get('/admin/export-data', [Controller::class, 'adminexport']);
 Route::get('/admin/manage-account', [Controller::class, 'adminmanage']);
+Route::get('/admin/data-speech', [Controller::class, 'dataspeech']);
+Route::get('/admin/data-debate', [Controller::class, 'datadebate']);
+Route::get('/admin/data-newscasting', [Controller::class, 'datanewscasting']);
+Route::get('/admin/data-scrable', [Controller::class, 'datascrable']);
 
 Route::resource('admin', adminController::class);

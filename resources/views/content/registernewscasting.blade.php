@@ -34,7 +34,7 @@
     
     .card:hover {
       transform: scale(1.02);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);z
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .form-check-label {

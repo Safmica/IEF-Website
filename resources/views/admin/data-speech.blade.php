@@ -127,7 +127,7 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="/admin/data-debate">Debate</a>
-                                <a class="nav-link" href="/admin/data-speech">Speech</a>
+                                <a class="nav-link active" href="/admin/data-speech">Speech</a>
                                 <a class="nav-link" href="/admin/data-scrable">Scrabble</a>
                                 <a class="nav-link" href="/admin/data-newscasting">Newscasting</a>
                             </nav>
@@ -147,7 +147,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4 text-dark freshman">Competition Data</h1>
+                    <h1 class="mt-4 text-dark freshman">Data Speech</h1>
                     <div class="card mb-4 text-dark mt-3">
                         <div class="card-body dortmund">
 

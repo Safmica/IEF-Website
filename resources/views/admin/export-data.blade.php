@@ -36,16 +36,18 @@
             --white: #fff6ed;
             --light-grey: #e0dede;
             --yellow: #f4c253;
-            --grey : #555555;
+            --grey: #555555;
             --shadow-nav: 0 2px 10px 2px #000000;
         }
 
-        .nav-link, .sb-nav-link-icon {
+        .nav-link,
+        .sb-nav-link-icon {
             text-decoration: none;
             color: var(--white) !important;
         }
 
-        .nav-link:hover, .sb-nav-link-icon:hover {
+        .nav-link:hover,
+        .sb-nav-link-icon:hover {
             color: var(--yellow) !important;
         }
 
@@ -117,11 +119,20 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav dortmund">
                         <div class="sb-sidenav-menu-heading text-light freshman">IEF 2024</div>
-                        <a class="nav-link" href="/admin/dashboard">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-file"></i></div>
                             Competition Data
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <a class="nav-link active" href="/admin/export-data">
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/admin/data-debate">Debate</a>
+                                <a class="nav-link" href="/admin/data-speech">Speech</a>
+                                <a class="nav-link" href="/admin/data-scrable">Scrabble</a>
+                                <a class="nav-link" href="/admin/data-newscasting">Newscasting</a>
+                            </nav>
+                        </div>
+                        <a class="nav-link" href="/admin/export-data">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-file-import"></i></div>
                             Export Data
                         </a>
