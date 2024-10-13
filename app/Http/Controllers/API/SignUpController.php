@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\AuthUser;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -30,7 +31,7 @@ class SignUpController extends Controller
         }
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
-        $auth = User::create($input);
+        $auth = AuthUser::create($input);
 
         $success['token'] = $auth->createToken('auth_token')->plainTextToken;
         $success['name'] = $auth->name;
