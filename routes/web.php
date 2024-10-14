@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\DebateController;
 use App\Http\Controllers\SpeechController;
 use App\Http\Controllers\ScrabbleController;
+use App\Http\Controllers\NewscastingController;
 use App\Http\Controllers\ExportController;
+use App\Models\Newscasting;
 use App\Models\Speech;
 
 Route::get('/', function () {
@@ -44,6 +46,7 @@ Route::get('/admin/data-scrabble', [Controller::class, 'datascrabble']);
 Route::get('/admin/data-debate', [DebateController::class, 'index']);
 Route::get('/admin/data-speech', [SpeechController::class, 'index']);
 Route::get('/admin/data-scrabble', [ScrabbleController::class, 'index']);
+Route::get('/admin/data-newscasting', [NewscastingController::class, 'index']);
 
 
 Route::get('admin/export-debate', [ExportController::class, 'exportDebate']);

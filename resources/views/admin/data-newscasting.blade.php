@@ -166,18 +166,22 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama</th>
+                                        <th>Full Name</th>
                                         <th>Competition</th>
-                                        <th>Bukti Pembayarank</th>
+                                        <th>Bukti Pembayaran</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($newscastings as $index => $newscasting)
                                     <tr>
-                                        <td>A</td>
-                                        <td>B</td>
-                                        <td>C</td>
-                                        <td>D</td>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $newscasting->team_name }}</td>
+                                        <td>Newscasting</td>
+                                        <td>
+                                            <a href="{{ $newscasting->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                        </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 
