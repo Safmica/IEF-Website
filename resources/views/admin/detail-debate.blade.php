@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard Admin</title>
+    <title>Data Debate</title>
     <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <!-- CSS -->
@@ -164,27 +164,57 @@
                             <table id="datatablesSimple" class="text-dark">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Nama Team</th>
-                                        <th>Competition</th>
-                                        <th>Bukti Pembayaran</th>
-                                        <th>Detail</th>
+                                        <th>Speaker</th>
+                                        <th>Full Name</th>
+                                        <th>Gender</th>
+                                        <th>Student Id Number</th>
+                                        <th>Major</th>
+                                        <th>Faculty</th>
+                                        <th>University</th>
+                                        <th>Nationality</th>
+                                        <th>Phone Number</th>
+                                        <th>Email Address</th>
+                                        <th>Photo</th>
+                                        <th>Id Student Card</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($debates as $index => $debate)
                                     <tr>
-                                        <td>{{ $index + 1 }}</td>
-                                        <td>{{ $debate->team_name }}</td>
-                                        <td>Debate</td>
+                                        <td>1</td>
+                                        <td>{{ $debate->full_name_s1 }}</td>
+                                        <td>{{ $debate->gender_s1 }}</td>
+                                        <td>{{ $debate->student_id_number_s1 }}</td>
+                                        <td>{{ $debate->major_s1 }}</td>
+                                        <td>{{ $debate->faculty_s1 }}</td>
+                                        <td>{{ $debate->university_s1 }}</td>
+                                        <td>{{ $debate->nationality_s1 }}</td>
+                                        <td>{{ $debate->phone_number_s1 }}</td>
+                                        <td>{{ $debate->email_address_s1 }}</td>
                                         <td>
-                                            <a href="{{ $debate->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                            <a href="{{ $debate->photo_s1 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
                                         </td>
                                         <td>
-                                            <a href="{{ route('debate.show', $debate->id) }}" class="btn btn-info">Detail</a>
+                                            <a href="{{ $debate->id_student_card_s1 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    <tr>
+                                        <td>2</td>
+                                        <td>{{ $debate->full_name_s2 }}</td>
+                                        <td>{{ $debate->gender_s2 }}</td>
+                                        <td>{{ $debate->student_id_number_s2 }}</td>
+                                        <td>{{ $debate->major_s2 }}</td>
+                                        <td>{{ $debate->faculty_s2 }}</td>
+                                        <td>{{ $debate->university_s2 }}</td>
+                                        <td>{{ $debate->nationality_s2 }}</td>
+                                        <td>{{ $debate->phone_number_s2 }}</td>
+                                        <td>{{ $debate->email_address_s2 }}</td>
+                                        <td>
+                                            <a href="{{ $debate->photo_s2 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ $debate->id_student_card_s2 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

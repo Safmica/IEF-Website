@@ -48,6 +48,8 @@ Route::get('/admin/data-speech', [SpeechController::class, 'index']);
 Route::get('/admin/data-scrabble', [ScrabbleController::class, 'index']);
 Route::get('/admin/data-newscasting', [NewscastingController::class, 'index']);
 
+// detail data competition
+Route::get('/debate/{id}', [DebateController::class, 'show'])->name('debate.show');
 
 Route::get('admin/export-debate', [ExportController::class, 'exportDebate']);
 Route::get('admin/export-newscasting', [ExportController::class, 'exportNewscasting']);

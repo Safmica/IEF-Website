@@ -11,8 +11,14 @@ class DebateController extends Controller
 {
     public function index()
     {
-        // Mengambil semua data dari tabel regist_debate
         $debates = RegistDebate::all();
         return view('admin.data-debate', compact('debates'));
+    }
+
+    public function show($id)
+    {
+        $debate = RegistDebate::findOrFail($id);
+        
+        return view('admin.detail-debate', compact('debate'));
     }
 }
