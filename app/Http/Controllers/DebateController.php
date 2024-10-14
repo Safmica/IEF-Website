@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\DebateExport;
-use App\Models\RegistDebate;
+use App\Models\Debate;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -11,13 +11,13 @@ class DebateController extends Controller
 {
     public function index()
     {
-        $debates = RegistDebate::all();
+        $debates = Debate::all();
         return view('admin.data-debate', compact('debates'));
     }
 
     public function show($id)
     {
-        $debate = RegistDebate::findOrFail($id);
+        $debate = Debate::findOrFail($id);
         
         return view('admin.detail-debate', compact('debate'));
     }
