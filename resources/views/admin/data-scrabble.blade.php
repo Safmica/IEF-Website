@@ -169,6 +169,7 @@
                                         <th>Full</th>
                                         <th>Competition</th>
                                         <th>Bukti Pembayaran</th>
+                                        <th>Detail</th>
                                     </tr>
                                 </thead>
                                 <tbody>
