@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\DebateExport;
 use App\Models\RegistDebate;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DebateController extends Controller
 {

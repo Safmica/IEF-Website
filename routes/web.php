@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\adminController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DebateController;
+use App\Http\Controllers\ExportController;
 
 Route::get('/', function () {
     return view('home');
@@ -38,9 +38,6 @@ Route::get('/admin/data-debate', [Controller::class, 'datadebate']);
 Route::get('/admin/data-newscasting', [Controller::class, 'datanewscasting']);
 Route::get('/admin/data-scrable', [Controller::class, 'datascrable']);
 
-Route::resource('admin', adminController::class);
-
-
 Route::get('/admin/data-debate', [DebateController::class, 'index']);
 Route::get('/download/registration_proof/{filename}', function ($filename) {
     if (Storage::disk('private')->exists("registration_proofs/{$filename}")) {
@@ -71,3 +68,8 @@ Route::get('/download/registration_proof/{filename}', function ($filename) {
         abort(404, 'File not found.');
     }
 })->name('download.registration_proof');
+
+Route::get('admin/export-debate', [ExportController::class, 'exportDebate']);
+Route::get('admin/export-newscasting', [ExportController::class, 'exportNewscasting']);
+Route::get('admin/export-speech', [ExportController::class, 'exportSpeech']);
+Route::get('admin/export-scrabble', [ExportController::class, 'exportScrabble']);
