@@ -165,7 +165,7 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Team</th>
+                                        <th>Team Name</th>
                                         <th>Competition</th>
                                         <th>Bukti Pembayaran</th>
                                         <th>Detail</th>
