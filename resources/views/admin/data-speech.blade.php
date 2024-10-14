@@ -129,7 +129,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="/admin/data-debate">Debate</a>
                                 <a class="nav-link active" href="/admin/data-speech">Speech</a>
-                                <a class="nav-link" href="/admin/data-scrable">Scrabble</a>
+                                <a class="nav-link" href="/admin/data-scrabble">Scrabble</a>
                                 <a class="nav-link" href="/admin/data-newscasting">Newscasting</a>
                             </nav>
                         </div>
@@ -172,10 +172,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($debates as $index => $debate)
+                                    @foreach($speeches as $index => $speech)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>{{ $debate->team_name }}</td>
+                                        <td>{{ $speech->team_name }}</td>
                                         <td>Speech</td>
                                         <td>
                                             <a href="{{ $speech->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>

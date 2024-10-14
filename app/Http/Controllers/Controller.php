@@ -104,8 +104,8 @@ class Controller extends BaseController
         return view("admin/data-newscasting");
     }
 
-    function datascrable()
+    function datascrabble()
     {
-        return view("admin/data-scrable");
+        return view("admin/data-scrabble");
     }
 }

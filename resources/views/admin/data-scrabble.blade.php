@@ -129,7 +129,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="/admin/data-debate">Debate</a>
                                 <a class="nav-link" href="/admin/data-speech">Speech</a>
-                                <a class="nav-link active" href="/admin/data-scrable">Scrabble</a>
+                                <a class="nav-link active" href="/admin/data-scrabble">Scrabble</a>
                                 <a class="nav-link" href="/admin/data-newscasting">Newscasting</a>
                             </nav>
                         </div>
@@ -166,18 +166,22 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama</th>
+                                        <th>Nama Team</th>
                                         <th>Competition</th>
-                                        <th>Bukti Pembayarank</th>
+                                        <th>Bukti Pembayaran</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($scrabbles as $index => $scrabble)
                                     <tr>
-                                        <td>A</td>
-                                        <td>B</td>
-                                        <td>C</td>
-                                        <td>D</td>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $scrabble->team_name }}</td>
+                                        <td>Scrabble</td>
+                                        <td>
+                                            <a href="{{ $scrabble->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                        </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 

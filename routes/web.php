@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DebateController;
 use App\Http\Controllers\SpeechController;
+use App\Http\Controllers\ScrabbleController;
 use App\Http\Controllers\ExportController;
 use App\Models\Speech;
 
@@ -38,10 +39,11 @@ Route::get('/admin/manage-account', [Controller::class, 'adminmanage']);
 Route::get('/admin/data-speech', [Controller::class, 'dataspeech']);
 Route::get('/admin/data-debate', [Controller::class, 'datadebate']);
 Route::get('/admin/data-newscasting', [Controller::class, 'datanewscasting']);
-Route::get('/admin/data-scrable', [Controller::class, 'datascrable']);
+Route::get('/admin/data-scrabble', [Controller::class, 'datascrabble']);
 
 Route::get('/admin/data-debate', [DebateController::class, 'index']);
 Route::get('/admin/data-speech', [SpeechController::class, 'index']);
+Route::get('/admin/data-scrabble', [ScrabbleController::class, 'index']);
 
 
 Route::get('admin/export-debate', [ExportController::class, 'exportDebate']);
