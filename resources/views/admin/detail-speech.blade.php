@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard Admin</title>
+    <title>Data Speech</title>
     <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <!-- CSS -->
@@ -127,8 +127,8 @@
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/admin/data-debate">Debate</a>
-                                <a class="nav-link active" href="/admin/data-speech">Speech</a>
+                                <a class="nav-link active" href="/admin/data-debate">Debate</a>
+                                <a class="nav-link" href="/admin/data-speech">Speech</a>
                                 <a class="nav-link" href="/admin/data-scrabble">Scrabble</a>
                                 <a class="nav-link" href="/admin/data-newscasting">Newscasting</a>
                             </nav>
@@ -157,34 +157,44 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4 text-dark freshman">Data Speech</h1>
+                    <h1 class="mt-4 text-dark freshman">Detail Data Speech</h1>
                     <div class="card mb-4 text-dark mt-3">
                         <div class="card-body dortmund">
 
-                            <!-- Menampilkan data barang di dalam tabel -->
                             <table id="datatablesSimple" class="text-dark">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
                                         <th>Full Name</th>
-                                        <th>Competition</th>
-                                        <th>Bukti Pembayaran</th>
+                                        <th>Gender</th>
+                                        <th>Student Id Number</th>
+                                        <th>Major</th>
+                                        <th>Faculty</th>
+                                        <th>University</th>
+                                        <th>Nationality</th>
+                                        <th>Phone Number</th>
+                                        <th>Email Address</th>
+                                        <th>Photo</th>
+                                        <th>Id Student Card</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($speeches as $index => $speech)
                                     <tr>
-                                        <td>{{ $index + 1 }}</td>
-                                        <td>{{ $speech->team_name }}</td>
-                                        <td>Speech</td>
+                                        <td>{{ $speech->full_name }}</td>
+                                        <td>{{ $speech->gender }}</td>
+                                        <td>{{ $speech->student_id_number }}</td>
+                                        <td>{{ $speech->major }}</td>
+                                        <td>{{ $speech->faculty }}</td>
+                                        <td>{{ $speech->university }}</td>
+                                        <td>{{ $speech->nationality }}</td>
+                                        <td>{{ $speech->phone_number }}</td>
+                                        <td>{{ $speech->email_address }}</td>
                                         <td>
-                                            <a href="{{ $speech->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                            <a href="{{ $speech->photo }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
                                         </td>
                                         <td>
-                                            <a href="{{ route('speech.show', $speech->id) }}" class="btn btn-info">Detail</a>
+                                            <a href="{{ $speech->id_student_card }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
                                         </td>
                                     </tr>
-                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

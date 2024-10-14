@@ -10,5 +10,4 @@ class RegistNewscasting extends Model
     use HasFactory;
 
     protected $table = 'regist_newscasting';
-    protected $fillable = ['full_name', 'registration_proof'];
 }

@@ -157,7 +157,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4 text-dark freshman">Data Debate</h1>
+                    <h1 class="mt-4 text-dark freshman">Detail Data Debate</h1>
                     <div class="card mb-4 text-dark mt-3">
                         <div class="card-body dortmund">
 
@@ -191,10 +191,10 @@
                                         <td>{{ $debate->phone_number_s1 }}</td>
                                         <td>{{ $debate->email_address_s1 }}</td>
                                         <td>
-                                            <a href="{{ $debate->photo_s1 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                            <a href="{{ $debate->photo_s1 }}" target="_blank" class="btn btn-primary">Photo</a>
                                         </td>
                                         <td>
-                                            <a href="{{ $debate->id_student_card_s1 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                            <a href="{{ $debate->id_student_card_s1 }}" target="_blank" class="btn btn-primary">ID Student Number</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -209,10 +209,10 @@
                                         <td>{{ $debate->phone_number_s2 }}</td>
                                         <td>{{ $debate->email_address_s2 }}</td>
                                         <td>
-                                            <a href="{{ $debate->photo_s2 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                            <a href="{{ $debate->photo_s2 }}" target="_blank" class="btn btn-primary">Photo</a>
                                         </td>
                                         <td>
-                                            <a href="{{ $debate->id_student_card_s2 }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
+                                            <a href="{{ $debate->id_student_card_s2 }}" target="_blank" class="btn btn-primary">ID Student Number</a>
                                         </td>
                                     </tr>
                                 </tbody>

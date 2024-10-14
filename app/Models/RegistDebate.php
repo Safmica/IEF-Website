@@ -9,6 +9,5 @@ class RegistDebate extends Model
 {
     use HasFactory;
 
-    protected $table = 'regist_debate'; // Nama tabel
-    protected $fillable = ['team_name', 'registration_proof'];
+    protected $table = 'regist_debate';
 }

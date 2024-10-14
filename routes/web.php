@@ -50,6 +50,9 @@ Route::get('/admin/data-newscasting', [NewscastingController::class, 'index']);
 
 // detail data competition
 Route::get('/debate/{id}', [DebateController::class, 'show'])->name('debate.show');
+Route::get('/speech/{id}', [SpeechController::class, 'show'])->name('speech.show');
+Route::get('/scrabble/{id}', [ScrabbleController::class, 'show'])->name('scrabble.show');
+Route::get('/newscasting/{id}', [NewscastingController::class, 'show'])->name('newscasting.show');
 
 Route::get('admin/export-debate', [ExportController::class, 'exportDebate']);
 Route::get('admin/export-newscasting', [ExportController::class, 'exportNewscasting']);

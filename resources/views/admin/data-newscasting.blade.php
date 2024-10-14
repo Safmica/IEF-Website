@@ -180,6 +180,9 @@
                                         <td>
                                             <a href="{{ $newscasting->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
                                         </td>
+                                        <td>
+                                            <a href="{{ route('newscasting.show', $newscasting->id) }}" class="btn btn-info">Detail</a>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -10,5 +10,4 @@ class RegistScrabble extends Model
     use HasFactory;
 
     protected $table = 'regist_scrabble';
-    protected $fillable = ['full_name', 'registration_proof'];
 }
