@@ -133,10 +133,19 @@
                                 <a class="nav-link active" href="/admin/data-newscasting">Newscasting</a>
                             </nav>
                         </div>
-                        <a class="nav-link" href="/admin/export-data">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseExportData" aria-expanded="false" aria-controls="collapseExportData">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-file-import"></i></div>
                             Export Data
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="collapseExportData" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/admin/export-debate">Debate</a>
+                                <a class="nav-link" href="/admin/export-speech">Speech</a>
+                                <a class="nav-link" href="/admin/export-scrable">Scrabble</a>
+                                <a class="nav-link" href="/admin/export-newscasting">Newscasting</a>
+                            </nav>
+                        </div>
                         <a class="nav-link" href="/admin/manage-account">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
                             Manage Account
