@@ -161,10 +161,6 @@
                     <div class="card mb-4 text-dark mt-3">
                         <div class="card-body dortmund">
 
-                            <!-- Menampilkan data barang di dalam tabel -->
-                            <!-- Tabel Data -->
-                            <!-- Tabel Data -->
-                            <!-- Tabel Data -->
                             <table id="datatablesSimple" class="text-dark">
                                 <thead>
                                     <tr>
@@ -177,9 +173,9 @@
                                 <tbody>
                                     @foreach($debates as $index => $debate)
                                     <tr>
-                                        <td>{{ $index + 1 }}</td> <!-- Nomor urut -->
-                                        <td>{{ $debate->team_name }}</td> <!-- Nama tim -->
-                                        <td>Debate</td> <!-- Static 'Debate' value -->
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $debate->team_name }}</td>
+                                        <td>Debate</td>
                                         <td>
                                             <a href="{{ $debate->registration_proof }}" target="_blank" class="btn btn-primary">Buka Bukti Pembayaran</a>
                                         </td>
