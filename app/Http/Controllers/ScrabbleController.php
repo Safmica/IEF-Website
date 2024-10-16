@@ -13,6 +13,13 @@ class ScrabbleController extends Controller
         return view('admin.data-scrabble', compact('scrabbles'));
     }
 
+    public function exportScrabble()
+    {
+        $scrabble = Scrabble::all();
+        
+        return view('admin.export-scrabble', compact('scrabble'));
+    }
+
     public function show($id)
     {
         $scrabble = Scrabble::findOrFail($id);

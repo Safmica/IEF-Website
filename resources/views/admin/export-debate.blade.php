@@ -7,9 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard Admin</title>
+    <title>Export Debate</title>
     <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <!-- CSS -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <script src="{{ asset('js/checkAdmin.js') }}"></script>
@@ -91,6 +98,31 @@
         .active {
             color: var(--yellow) !important;
         }
+
+        .btn-copy {
+            background-color: #c4ad9d !important;
+            color: white !important;
+        }
+
+        .btn-csv {
+            background-color: #17a2b8 !important;
+            color: white !important;
+        }
+
+        .btn-excel {
+            background-color: #28a745 !important;
+            color: white !important;
+        }
+
+        .btn-pdf {
+            background-color: #dc3545 !important;
+            color: white !important;
+        }
+
+        .btn-print {
+            background-color: #ffc107 !important;
+            color: black !important;
+        }
     </style>
 </head>
 
@@ -120,6 +152,10 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav dortmund">
                         <div class="sb-sidenav-menu-heading text-light freshman">IEF 2024</div>
+                        <a class="nav-link" href="/admin/dashboard">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
+                            Dashboard
+                        </a>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-file"></i></div>
                             Competition Data
@@ -140,9 +176,9 @@
                         </a>
                         <div class="collapse" id="collapseExportData" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="/admin/export-debate">Debate</a>
+                                <a class="nav-link active" href="/admin/export-debate">Debate</a>
                                 <a class="nav-link" href="/admin/export-speech">Speech</a>
-                                <a class="nav-link" href="/admin/export-scrable">Scrabble</a>
+                                <a class="nav-link" href="/admin/export-scrabble">Scrabble</a>
                                 <a class="nav-link" href="/admin/export-newscasting">Newscasting</a>
                             </nav>
                         </div>
@@ -157,30 +193,61 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4 text-dark freshman">Export Data</h1>
+                    <h1 class="mt-4 text-dark freshman">Export Data Debate</h1>
                     <div class="card mb-4 text-dark mt-3">
+                        <div class="card-header mt-3">
+                            <div class="export-buttons"></div>
+                        </div>
                         <div class="card-body dortmund">
 
                             <!-- Menampilkan data barang di dalam tabel -->
-                            <table id="datatablesSimple" class="text-dark">
+                            <table class="table table-bordered" id="export-debate" width="100%" cellspacing="0" class="text-dark">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama</th>
+                                        <th>Full Name</th>
                                         <th>Competition</th>
-                                        <th>Bukti Pembayarank</th>
+                                        <th>Gender</th>
+                                        <th>Student Id Number</th>
+                                        <th>Major</th>
+                                        <th>Faculty</th>
+                                        <th>University</th>
+                                        <th>Nationality</th>
+                                        <th>Phone Number</th>
+                                        <th>Email Address</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($debate as $index => $debate)
                                     <tr>
-                                        <td>A</td>
-                                        <td>B</td>
-                                        <td>C</td>
-                                        <td>D</td>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $debate->full_name_s1 }}</td>
+                                        <td>Debate</td>
+                                        <td>{{ $debate->gender_s1 }}</td>
+                                        <td>{{ $debate->student_id_number_s1 }}</td>
+                                        <td>{{ $debate->major_s1 }}</td>
+                                        <td>{{ $debate->faculty_s1 }}</td>
+                                        <td>{{ $debate->university_s1 }}</td>
+                                        <td>{{ $debate->nationality_s1 }}</td>
+                                        <td>{{ $debate->phone_number_s1 }}</td>
+                                        <td>{{ $debate->email_address_s1 }}</td>
                                     </tr>
+                                    <tr>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $debate->full_name_s2 }}</td>
+                                        <td>Debate</td>
+                                        <td>{{ $debate->gender_s2 }}</td>
+                                        <td>{{ $debate->student_id_number_s2 }}</td>
+                                        <td>{{ $debate->major_s2 }}</td>
+                                        <td>{{ $debate->faculty_s2 }}</td>
+                                        <td>{{ $debate->university_s2 }}</td>
+                                        <td>{{ $debate->nationality_s2 }}</td>
+                                        <td>{{ $debate->phone_number_s2 }}</td>
+                                        <td>{{ $debate->email_address_s2 }}</td>
+                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
                 </div>
@@ -195,6 +262,42 @@
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            var table = $('#export-debate').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                        extend: 'copy',
+                        text: '<i class="fas fa-copy"></i> Salin Data',
+                        className: 'btn-copy'
+                    },
+                    {
+                        extend: 'csv',
+                        text: '<i class="fas fa-file-csv"></i> Ekspor CSV',
+                        className: 'btn-csv'
+                    },
+                    {
+                        extend: 'excel',
+                        text: '<i class="fas fa-file-excel"></i> Ekspor Excel',
+                        className: 'btn-excel'
+                    },
+                    {
+                        extend: 'pdf',
+                        text: '<i class="fas fa-file-pdf"></i> Ekspor PDF',
+                        className: 'btn-pdf'
+                    },
+                    {
+                        extend: 'print',
+                        text: '<i class="fas fa-print"></i> Cetak',
+                        className: 'btn-print'
+                    }
+                ]
+            });
+
+            table.buttons().container().appendTo('.export-buttons');
+        });
+    </script>
+
     <!-- JS -->
     <script src="{{ asset('js/admin.js') }}"></script>
     <script src="{{ asset('js/datatables-simple-demo.js') }}"></script>
@@ -202,8 +305,15 @@
     <!-- Bootstrap JS -->
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
 </body>
 
 </html>

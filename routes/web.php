@@ -48,13 +48,13 @@ Route::get('/admin/data-speech', [SpeechController::class, 'index']);
 Route::get('/admin/data-scrabble', [ScrabbleController::class, 'index']);
 Route::get('/admin/data-newscasting', [NewscastingController::class, 'index']);
 
+Route::get('/admin/export-debate', [DebateController::class, 'exportDebate']);
+Route::get('/admin/export-speech', [SpeechController::class, 'exportSpeech']);
+Route::get('/admin/export-scrabble', [ScrabbleController::class, 'exportScrabble']);
+Route::get('/admin/export-newscasting', [NewscastingController::class, 'exportNewscasting']);
+
 // detail data competition
 Route::get('/debate/{id}', [DebateController::class, 'show'])->name('debate.show');
 Route::get('/speech/{id}', [SpeechController::class, 'show'])->name('speech.show');
 Route::get('/scrabble/{id}', [ScrabbleController::class, 'show'])->name('scrabble.show');
 Route::get('/newscasting/{id}', [NewscastingController::class, 'show'])->name('newscasting.show');
-
-Route::get('admin/export-debate', [ExportController::class, 'exportDebate']);
-Route::get('admin/export-newscasting', [ExportController::class, 'exportNewscasting']);
-Route::get('admin/export-speech', [ExportController::class, 'exportSpeech']);
-Route::get('admin/export-scrabble', [ExportController::class, 'exportScrabble']);

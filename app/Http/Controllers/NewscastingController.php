@@ -13,6 +13,13 @@ class NewscastingController extends Controller
         return view('admin.data-newscasting', compact('newscastings'));
     }
 
+    public function exportNewscasting()
+    {
+        $newscasting = Newscasting::all();
+        
+        return view('admin.export-newscasting', compact('newscasting'));
+    }
+
     public function show($id)
     {
         $newscasting = Newscasting::findOrFail($id);

@@ -7,9 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Data Debate</title>
+    <title>Export Speech</title>
     <link rel="icon" href="{{ asset('images/assets/logo_ief_small.png') }}" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <!-- CSS -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <script src="{{ asset('js/checkAdmin.js') }}"></script>
@@ -91,6 +98,31 @@
         .active {
             color: var(--yellow) !important;
         }
+
+        .btn-copy {
+            background-color: #c4ad9d !important;
+            color: white !important;
+        }
+
+        .btn-csv {
+            background-color: #17a2b8 !important;
+            color: white !important;
+        }
+
+        .btn-excel {
+            background-color: #28a745 !important;
+            color: white !important;
+        }
+
+        .btn-pdf {
+            background-color: #dc3545 !important;
+            color: white !important;
+        }
+
+        .btn-print {
+            background-color: #ffc107 !important;
+            color: black !important;
+        }
     </style>
 </head>
 
@@ -131,8 +163,8 @@
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link active" href="/admin/data-debate">Debate</a>
-                                <a class="nav-link" href="/admin/data-speech">Speech</a>
+                                <a class="nav-link" href="/admin/data-debate">Debate</a>
+                                <a class="nav-link active" href="/admin/data-speech">Speech</a>
                                 <a class="nav-link" href="/admin/data-scrabble">Scrabble</a>
                                 <a class="nav-link" href="/admin/data-newscasting">Newscasting</a>
                             </nav>
@@ -161,15 +193,20 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4 text-dark freshman">Detail Data Debate</h1>
+                    <h1 class="mt-4 text-dark freshman">Export Data Speech</h1>
                     <div class="card mb-4 text-dark mt-3">
+                        <div class="card-header mt-3">
+                            <div class="export-buttons"></div>
+                        </div>
                         <div class="card-body dortmund">
 
-                            <table id="datatablesSimple" class="text-dark">
+                            <!-- Menampilkan data barang di dalam tabel -->
+                            <table class="table table-bordered" id="export-speech" width="100%" cellspacing="0" class="text-dark">
                                 <thead>
                                     <tr>
-                                        <th>Speaker</th>
+                                        <th>No</th>
                                         <th>Full Name</th>
+                                        <th>Competition</th>
                                         <th>Gender</th>
                                         <th>Student Id Number</th>
                                         <th>Major</th>
@@ -178,47 +215,24 @@
                                         <th>Nationality</th>
                                         <th>Phone Number</th>
                                         <th>Email Address</th>
-                                        <th>Photo</th>
-                                        <th>Id Student Card</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($speeches as $index => $speech)
                                     <tr>
-                                        <td>1</td>
-                                        <td>{{ $debate->full_name_s1 }}</td>
-                                        <td>{{ $debate->gender_s1 }}</td>
-                                        <td>{{ $debate->student_id_number_s1 }}</td>
-                                        <td>{{ $debate->major_s1 }}</td>
-                                        <td>{{ $debate->faculty_s1 }}</td>
-                                        <td>{{ $debate->university_s1 }}</td>
-                                        <td>{{ $debate->nationality_s1 }}</td>
-                                        <td>{{ $debate->phone_number_s1 }}</td>
-                                        <td>{{ $debate->email_address_s1 }}</td>
-                                        <td>
-                                            <a href="{{ $debate->photo_s1 }}" target="_blank" class="btn btn-primary">Photo</a>
-                                        </td>
-                                        <td>
-                                            <a href="{{ $debate->id_student_card_s1 }}" target="_blank" class="btn btn-primary">ID Student Number</a>
-                                        </td>
+                                        <td>{{ $index + 1 }}</td>
+                                        <td>{{ $speech->full_name }}</td>
+                                        <td>Speech</td>
+                                        <td>{{ $speech->gender }}</td>
+                                        <td>{{ $speech->student_id_number }}</td>
+                                        <td>{{ $speech->major }}</td>
+                                        <td>{{ $speech->faculty }}</td>
+                                        <td>{{ $speech->university }}</td>
+                                        <td>{{ $speech->nationality }}</td>
+                                        <td>{{ $speech->phone_number }}</td>
+                                        <td>{{ $speech->email_address }}</td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>{{ $debate->full_name_s2 }}</td>
-                                        <td>{{ $debate->gender_s2 }}</td>
-                                        <td>{{ $debate->student_id_number_s2 }}</td>
-                                        <td>{{ $debate->major_s2 }}</td>
-                                        <td>{{ $debate->faculty_s2 }}</td>
-                                        <td>{{ $debate->university_s2 }}</td>
-                                        <td>{{ $debate->nationality_s2 }}</td>
-                                        <td>{{ $debate->phone_number_s2 }}</td>
-                                        <td>{{ $debate->email_address_s2 }}</td>
-                                        <td>
-                                            <a href="{{ $debate->photo_s2 }}" target="_blank" class="btn btn-primary">Photo</a>
-                                        </td>
-                                        <td>
-                                            <a href="{{ $debate->id_student_card_s2 }}" target="_blank" class="btn btn-primary">ID Student Number</a>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -235,6 +249,42 @@
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            var table = $('#export-speech').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                        extend: 'copy',
+                        text: '<i class="fas fa-copy"></i> Salin Data',
+                        className: 'btn-copy'
+                    },
+                    {
+                        extend: 'csv',
+                        text: '<i class="fas fa-file-csv"></i> Ekspor CSV',
+                        className: 'btn-csv'
+                    },
+                    {
+                        extend: 'excel',
+                        text: '<i class="fas fa-file-excel"></i> Ekspor Excel',
+                        className: 'btn-excel'
+                    },
+                    {
+                        extend: 'pdf',
+                        text: '<i class="fas fa-file-pdf"></i> Ekspor PDF',
+                        className: 'btn-pdf'
+                    },
+                    {
+                        extend: 'print',
+                        text: '<i class="fas fa-print"></i> Cetak',
+                        className: 'btn-print'
+                    }
+                ]
+            });
+
+            table.buttons().container().appendTo('.export-buttons');
+        });
+    </script>
+
     <!-- JS -->
     <script src="{{ asset('js/admin.js') }}"></script>
     <script src="{{ asset('js/datatables-simple-demo.js') }}"></script>
@@ -242,8 +292,15 @@
     <!-- Bootstrap JS -->
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
 </body>
 
 </html>

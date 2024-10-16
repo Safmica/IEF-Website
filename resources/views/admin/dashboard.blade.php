@@ -120,6 +120,10 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav dortmund">
                         <div class="sb-sidenav-menu-heading text-light freshman">IEF 2024</div>
+                        <a class="nav-link active" href="/admin/dashboard">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
+                            Dashboard
+                        </a>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-file"></i></div>
                             Competition Data
@@ -142,7 +146,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="/admin/export-debate">Debate</a>
                                 <a class="nav-link" href="/admin/export-speech">Speech</a>
-                                <a class="nav-link" href="/admin/export-scrable">Scrabble</a>
+                                <a class="nav-link" href="/admin/export-scrabble">Scrabble</a>
                                 <a class="nav-link" href="/admin/export-newscasting">Newscasting</a>
                             </nav>
                         </div>

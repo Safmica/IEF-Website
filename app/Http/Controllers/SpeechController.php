@@ -13,6 +13,13 @@ class SpeechController extends Controller
         return view('admin.data-speech', compact('speeches'));
     }
 
+    public function exportSpeech()
+    {
+        $speeches = Speech::all();
+        
+        return view('admin.export-speech', compact('speeches'));
+    }
+
     public function show($id)
     {
         $speech = Speech::findOrFail($id);

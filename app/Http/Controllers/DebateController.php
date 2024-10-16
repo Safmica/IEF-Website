@@ -15,6 +15,13 @@ class DebateController extends Controller
         return view('admin.data-debate', compact('debates'));
     }
 
+    public function exportDebate()
+    {
+        $debate = Debate::all();
+        
+        return view('admin.export-debate', compact('debate'));
+    }
+
     public function show($id)
     {
         $debate = Debate::findOrFail($id);
