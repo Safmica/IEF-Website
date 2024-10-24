@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Scrabble;
 
 class adminController extends Controller
 {
@@ -88,8 +89,6 @@ class adminController extends Controller
             'password' => Hash::make($request->password),
             'role' => $request->role,
         ]);
-
-
     }
 
     /**
@@ -104,5 +103,23 @@ class adminController extends Controller
         }
 
         return redirect()->route('admin.index')->with('error', 'Failed to delete user');
+    }
+
+    public function confirmScrabble($id)
+    {
+        $scrabble = Scrabble::find($id);
+
+        if ($scrabble) {
+            $scrabble->status = 1;
+            $scrabble->save();
+
+            $user = User::find($scrabble->id_user);
+            if ($user) {
+                $user->scrabble = 'Registered';
+                $user->save();
+            }
+        }
+
+        return redirect()->back()->with('success', 'Pendaftaran Scrabble berhasil dikonfirmasi!');
     }
 }

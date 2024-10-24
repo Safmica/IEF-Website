@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DebateController;
 use App\Http\Controllers\SpeechController;
@@ -58,3 +59,7 @@ Route::get('/debate/{id}', [DebateController::class, 'show'])->name('debate.show
 Route::get('/speech/{id}', [SpeechController::class, 'show'])->name('speech.show');
 Route::get('/scrabble/{id}', [ScrabbleController::class, 'show'])->name('scrabble.show');
 Route::get('/newscasting/{id}', [NewscastingController::class, 'show'])->name('newscasting.show');
+
+// Confirm competition
+// routes/web.php
+Route::post('/admin/scrabble/confirm/{id}', [AdminController::class, 'confirmScrabble'])->name('scrabble.confirm');

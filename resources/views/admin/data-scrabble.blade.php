@@ -174,6 +174,7 @@
                                         <th>Competition</th>
                                         <th>Bukti Pembayaran</th>
                                         <th>Detail</th>
+                                        <th>Konfirmasi</th> <!-- Kolom baru untuk konfirmasi -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -187,6 +188,16 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('scrabble.show', $scrabble->id) }}" class="btn btn-info">Detail</a>
+                                        </td>
+                                        <td>
+                                            @if ($scrabble->status == 0) <!-- Jika belum dikonfirmasi -->
+                                            <form action="{{ route('scrabble.confirm', $scrabble->id) }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn btn-success">Konfirmasi</button>
+                                            </form>
+                                            @else <!-- Jika sudah dikonfirmasi -->
+                                            Confirmed
+                                            @endif
                                         </td>
                                     </tr>
                                     @endforeach
